@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>โปรแกรมออกแบบ Anchor to Concrete — ACI 318-25 บทที่ 17</title>
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIuC5guC4m+C4o+C5geC4geC4o+C4oeC4reC4reC4geC5geC4muC4miBBbmNob3IgdG8gQ29uY3JldGUgKEFDSSAzMTgtMjUpIiwgInNob3J0X25hbWUiOiAiQW5jaG9yIERlc2lnbiIsICJkZXNjcmlwdGlvbiI6ICLguYLguJvguKPguYHguIHguKPguKHguK3guK3guIHguYHguJrguJrguYHguKXguLDguJXguKPguKfguIjguKrguK3guJogQW5jaG9yIHRvIENvbmNyZXRlIOC4leC4suC4oSBBQ0kgMzE4LTI1IOC4muC4l+C4l+C4teC5iCAxNyIsICJzdGFydF91cmwiOiAiLiIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjZWVmMWY2IiwgInRoZW1lX2NvbG9yIjogIiMwQjI1NDUiLCAib3JpZW50YXRpb24iOiAicG9ydHJhaXQtcHJpbWFyeSIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQU1BQUFBREFDQVlBQUFCUzNHd0hBQUFFTEVsRVFWUjRuTzNjeTFYYlVBQkZVWm1WR1hWUVFJcHdPYWttNWJpSUZFQWRqTW1JcklUZ2o2VDMxZDI3QUt6QlBYcVNBemt0ZzNsK09iLzN2Z2JxZW51OW5IcGZ3NGV1RjJMc0xFdmZJSnAvc05GelMrc1ltbjJZNGJOV2l4aXFmNERoczFmTkVLcjlZTU9udEJvaEZQK0Joazl0SlVONEt2V0Rsc1g0YWFQa3pvcVVaUGowc3ZjMDJIMENHRDg5N2QzZnJnQ01ueEhzMmVIbUFJeWZrV3pkNDZZQWpKOFJiZG5sNmdDTW41R3QzZWVxQUl5Zkdhelo2Y01CR0Q4emVYU3ZEd1ZnL016b2tkM2VEY0Q0bWRtOS9SYjlWUWlZemMwQTNQMDVnbHM3dmhxQThYTWsxL2JzRVlob1h3Ymc3czhSZmJYcmJ6MHVaRFNYSDc5NlgwSVg1NS9mZTE5Q2QvK2RBTzcrSE5ubmZYc0hJTm8vQWJqN2srRHZuVHNCaVBZbkFIZC9rbnpzM1FsQU5BRVE3V2xaUFA2UTZmbmwvTzRFSUpvQWlDWUFvZ21BYUU5ZWdFbm1CQ0NhQUlnbUFLSUpnR2dDSUpvQWlIYnlOV2hadGYrKzJOL3hsdVVFSUpvQWlDWUFvZ21BYUFJZ21nQ0lKZ0NpQ1lCb0FpQ2FBSWdtQUtJSmdHZ0NJSm9BaUNZQW9nbUFhQUlnbWdDSUpnQ2lDWUJvQWlDYUFJZ21BS0lKZ0dnQ0lKb0FpQ1lBb2dtQWFBSWdtZ0NJSmdDaUNZQm9BaUNhQUlnbUFLSUpnR2dDSUpvQWlDWUFvZ21BYUFJZ21nQ0lKZ0NpQ1lCb0FpQ2FBSWdtQUtJSmdHZ0NJSm9BaUNZQW9nbUFhQUlnbWdDSUpnQ2lDWUJvQWlDYUFJZ21BS0lKZ0dnQ0lKb0FpQ1lBb2dtQWFBSWdtZ0NJSmdDaUNZQm9BaUNhQUlnbUFLSUpnR2dDSUpvQWlDWUFvZ21BYUFJZ21nQ0lKZ0NpQ1lCb0FpQ2FBSWdtQUtJSmdHZ0NJSm9BaUhaNmZqbS85NzZJR1Z4Ky9PcDlDYXVjZjM3dmZRbFRjQUk4YUtaQnpYU3R2UWxnaFJtR05jTTFqa1FBUkJQQVNpUGZZVWUrdGxFSllJTVJoemJpTmMxQUFCdU5OTGlScm1VMkF0akI4T1luZ0oxNlI5RDc4MmNuZ0lrWi8zNENLS0RIRUkyL0RBRVUwbktReGwrT0FBb3l6UGtJb0xEYUVZaXNMQUZNeFBqTEUwQUZOWVpxL0hVSW9CS0RuWU1BS2lvVmdaanFFVUJsZThkci9IVUpZR0RHWDU4QUd0Z3laT052UXdDTkdQU1lCTkRRb3hHSXBSMEJOSFp2M01iZmxnQTZ1RFp5NDI5UEFFUVRRQ2VmNy9idS9uMDh2YjFlVHIwdkl0WEg2STIvbjlPeUxJdi9INVJVSG9HSUpnQ2lQUzNMc25nUElOSGI2K1hrQkNDYUFJajJKd0NQUVNUNTJMc1RnR2dDSU5vL0FYZ01Jc0hmTzNjQ0VPMi9BSndDSE5ubmZUc0JpUFpsQUU0Qmp1aXJYVHNCaUhZMUFLY0FSM0p0enpkUEFCRndCTGQyN0JHSVE3dDNFNzhiZ0ZPQUkzdm9CQkFCTTNwa3R3OC9Bb21BbVR5NjExWHZBQ0pnQm10MnV2b2xXQVNNYk8wK04zMExKQUpHdEdXWG03OEdGUUVqMmJySFhmOE9JQUpHc0dlSFJRYnNmNWFqaHhJMzRLSjNjQ0hRU3Ftbmo2Sy9DdUdSaUJaSzdxemFZSjBHbEZiakJsdjlqaTBFOXFyNVpOSHNrVVVJck5YaWticjVNN3NRdUtYMWUyVFhsMVl4c0N4OXZ6ejVEZU8wL2ppY2loZmdBQUFBQUVsRlRrU3VRbUNDIiwgInNpemVzIjogIjE5MngxOTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifSwgeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFnQUFBQUlBQ0FZQUFBRDBlTlQ2QUFBTm5rbEVRVlI0bk8zY3dYbmJPQnVGVVRyUHYwc2RLV0NLY0RtcEp1VzRpQlNRT3JMT2JIN0ZHdG15UlJJa1B1Q2UwOEJRME9LK2hKeDVXaWpwNjdmblA3MmZBYUNGMzc5ZW5uby9BMi81VWpveThnQUNvUmVIZmdKREQ3Q09LRGllQXo2QXdRZG9TeEMwNTBBYk1mb0E1eEVFK3puQWpRdytRQTFpWUJ1SHRvTFJCNmhORER6T1FUM0E4QU9NUnd4OHpPSGNZZlFCNWlFRzNuSWdOd3cvd0x5RXdDc0g4WCtHSHlDSEVBZ1BBS01Qa0MwNUJDSS91T0VINEZwaUNNUjlZT01Qd0QxSklSRHpRUTAvQUk5S0NJSHBQNkRoQjJDcm1VTmcyZzltK0FGb1lkWUltUEpER1g4QVdwc3RCS2I2TUlZZmdLUE5FZ0pmZWo5QUs4WWZnRFBNc2pmRFY4d3NYd1FBNHhuNU5tRG9Hd0RqRDBCUEkrL1FzQUV3OHFFRE1JOVI5Mmk0cTR0UkR4cUErWTMwazhCUU53REdINERLUnRxcFlRSmdwRU1GSU5jb2UxWCtxbUtVZ3dTQWE5Vi9EaWo5Y01ZZmdORlZEWUd5UHdFWWZ3Qm1VSFhQU2daQTFjTUNnQzBxN2xxNUFLaDRTQUN3VjdWOUt4VUExUTRIQUZxcXRITmxBcURTb1FEQVVhcnNYWWtBcUhJWUFIQ0dDcnZYUFFBcUhBSUFuSzMzL25VTmdONGZIZ0I2NnJtRDNRTEErQU5Bdnozc0VnREdId0JlOWRqRjB3UEErQVBBVzJmdjQ2a0JZUHdCNEw0emQvSzBBREQrQUZCSDkzOEdDQUM4T3V1RitaUUE4UFlQQUk4N1l6Y1BEd0RqRHdEckhiMmZod2FBOFFlQTdZN2NVWDhEQUFDQkRnc0FiLzhBc045UmUzcElBQmgvQUdqbmlGMXRIZ0RHSHdEYWE3MnYvZ1lBQUFJMURRQnYvd0J3bkpZNzJ5d0FqRDhBSEsvVjN2b0pBQUFDTlFrQWIvOEFjSjRXdTdzN0FJdy9BSnh2Ny83NkNRQUFBdTBLQUcvL0FORFBuaDEyQXdBQWdUWUhnTGQvQU9odjZ4NjdBUUNBUUpzQ3dOcy9BTlN4WlpmL2Q4Wi9CRnA3K2Y2ejl5UEFYODgvL3VuOUNMQ2Fud0FBWUFKclg5QlhCWUMzZndDWWd4c0FBSmpFbWhkMUFRQUFnUjRPQU5mL0FGRGZvM3Z0QmdBQUFqMFVBTjcrQVdBY2oreTJHd0FBQ1BScEFIajdCNER4ZkxiZmJnQUFJSkFBQUlCQUh3YUE2MzhBR05kSE8rNEdBQUFDM1EwQWIvOEFNTDU3ZSs0R0FBQUNDUUFBQ1BSdUFMaitCNEI1dkxmcmJnQUFJSkFBQUlCQUFnQUFBcjBKQUwvL0E4QjhidmZkRFFBQUJCSUFBQkRvUHdIZytoOEE1blc5ODI0QUFDQ1FBQUNBUUFJQUFBTDlEUUMvL3dQQS9DNTc3d1lBQUFJSkFBQUlKQUFBSUpBQUFJQkFBZ0FBQW4xWkZ2OENBQUNTZlAzMi9NY05BQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUTZJdC9BZ2dBZWR3QUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUdlL0srQW9hK1g3ejk3UDBJWHp6Lys2ZjBJRU0wTkFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVE2T25ydCtjL3ZSOENLbnI1L3JQM0k5REE4NDkvZWo4Q2xPUUdBTzR3SE9QekhjSjlBZ0ErWUVERzVidURqd2tBQUFna0FPQVQzaVRINHp1RHp3a0FlSUJCR1lmdkNoNGpBT0JCaHFVKzN4RThUZ0RBQ2dhbUx0OE5yQ01BQUNDUUFJQ1Z2R25XNHp1QjlRUUFiR0J3NnZCZHdEWUNBRFl5UFAzNURtQTdBUUE3R0NCZ1ZBSUFHSkw0Z24wRUFPeGtpTTduekdFL0FRQU5HS1R6T0d0b1F3QkFJNGJwZU00WTJoRUEwSkNCQWtZaEFJQWhpQ3RvU3dCQVk0YXFQV2NLN1FrQU9JREJhc2Rad2pFRUFCekVjTzNuRE9FNEFnQU9aTUNBcWdRQVVKSjRnbU1KQURpWUlWdlBtY0h4QkFDY3dLQTl6bG5CT1FRQW5NU3dmYzRad1hrRUFKekl3QUZWQ0FDZ0JIRUU1eElBY0RKRDk1WXpnZk1KQU9qQTRMMXlGdENIQUlCT0RCL1Frd0NBanRJaklQM3pRMDhDQU9qQytFTmZBZ0E2U3h6Q3hNOE0xUWdBS0NCcEVKTStLMVFtQUtBSXd3aWNTUUJBSWJOSHdPeWZEMFlpQUtDWVdVZHkxczhGb3hJQXdPR01QOVFqQUtDZ21RWnpwczhDTXhFQVVKVGhCSTRrQUtDdzBTTmc5T2VIbVFrQUtHN1VFUjMxdVNHRkFBQ2FNLzVRbndDQUFSaFVvRFVCQUlNWUpRSkdlVTVJSndCZ0lOWEh0ZnJ6QWE4RUFBeW02c2hXZlM3Z2ZRSUEyTTM0dzNnRUFBekk0QUo3Q1FBWVZKVUlxUEljd0RvQ0FBYldlM3g3Ly9lQjdRUUFESzdYQ0J0L0dKc0FBRll6L2pBK0FRQVRNTWpBV2dJQUpuRldCSWdObUlNQWdJa2NQYzdHSCtZaEFHQXlSNDIwOFllNUNBRGdVOFlmNWlNQVlFSUdHL2lNQUlCSnRZb0FNUUZ6K3ZMNzE4dFQ3NGNBanJGM3ZJMC96TXNOQUV4dTY0Z2JmNWliQUFDQVFBSUFBcXg5bS9mMkQvTVRBQkRpMFZFMy9wQkJBRUNRejhiZCtFTU9BUUJoN28yODhZY3NBZ0FBQW4xWmxtWHgvd0tBTExkdis5NytJY3Z2WHk5UGJnQWcxR1gwalQ5a0VnQVF6UGhETGdFQUFJRUVBQUFFK2hzQS9oQVFBT1ozMlhzM0FBQVFTQUFBUUNBQkFBQ0IvaE1BL2c0QUFPWjF2Zk51QUFBZ2tBQUFnRUFDQUFBQ3ZRa0Fmd2NBQVBPNTNYYzNBQUFRU0FBQVFLQjNBOERQQUFBd2ovZDIzUTBBQUFRU0FBQVE2RzRBK0JrQUFNWjNiOC9kQUFCQUlBRUFBSUUrREFBL0F3REF1RDdhY1RjQUFCQklBQURBaEQ2N3hmODBBUHdNQUFEemNRTUFBSUVlQ2dDM0FBQXdqa2QyMncwQUFBUjZPQURjQWdCQWZZL3V0UnNBQUFpMEtnRGNBZ0JBWFd0MjJnMEFBQVJhSFFCdUFRQ2duclg3N0FZQUFBSnRDZ0MzQUFCUXg1WmRkZ01BQUlFMkI0QmJBQURvYitzZXV3RUFnRUM3QXNBdEFBRDBzMmVIZDk4QWlBQUFPTi9lL2ZVVEFBQUVhaElBYmdFQTREd3RkdGNOQUFBTXBOVkxkN01BY0FzQUFPTm9lZ01nQWdEZ09DMTMxazhBQURDQTFpL1p6UVBBTFFBQTFIZklEWUFJQUlCMmp0alZ3MzRDRUFFQXNOOVJlK3B2QUFDZ3FDTmZwZzhOQUxjQUFGRFQ0VGNBSWdBQTFqdDZQMC81Q1VBRUFNRGp6dGpOMC80R1FBUUF3T2ZPMmt0L0JBZ0FSWno1c254cUFMZ0ZBSUFhVHI4QkVBRUE4TmJaKzlqbEp3QVJBQUN2ZXV4aXQ3OEJFQUVBMEc4UHUvNFJvQWdBSUZuUEhleityd0JFQUFDSmV1OWY5d0JZbHY2SEFBQm5xckI3SlFKZ1dXb2NCZ0FjcmNyZWxRbUFaYWx6S0FCd2hFbzdWeW9BbHFYVzRRQkFLOVgyclZ3QUxFdTlRd0tBUFNydVdya0h1dmIxMi9PZjNzOEFBRnRWSFA2THNnOTJUUWdBTUpySzQ3OHNSWDhDdUZYOUVBSGcyZ2k3TlVRQUxNc1lod2tBbyt6VkVBOTV6YzhCQUZRMHl2QmZEUFd3MTRRQUFGV01OdjdMTXRCUEFMZEdQR3dBNWpQcUhnMzUwTmZjQkFEUXc2akRmekgwdzE4VEFnQ2NaZlR4WDVhSkFtQlpSQUFBeDVwaCtDK20rU0RYaEFBQXJjMDAvc3N5YVFBc2l3Z0FvSTNaaHY5aXlnOTFUUWdBc05XczQ3OHNBUUZ3SVFRQWVOVE13Mzh4L1FlOEpRUUF1Q2RoK0M5aVB1Z3RJUURBUmRMd1g4Ujk0RnRDQUNCWDR2QmZ4SDd3VzBJQUlFZnk4Ri9FSDhBdElRQXdMOFAveWtIY0lRUUE1bUQwMytkUUhpQUdBTVpqK0QvbWNGWVFBZ0MxR2YzSE9haU54QUJBRFVaL0c0ZldpQ0FBT0kvUjM4OEJIa0FNQUxSbDhOdHpvQ2NRQkFEckdQempPZUNPaEFHQXNlL2xYK1pnanBMZ1ZnZjZBQUFBQUVsRlRrU3VRbUNDIiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifV19">
+<meta name="theme-color" content="#0B2545">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Anchor Design">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAELElEQVR4nO3cy1XbUABFUZmVGXVQQIpwOakm5biIFEAdjMmIrITgj6T31d27AKzBPXqSAzktg3l+Ob/3vgbqenu9nHpfw4euF2LsLEvfIJp/sNFzS+sYmn2Y4bNWixiqf4Dhs1fNEKr9YMOntBohFP+Bhk9tJUN4KvWDlsX4aaPkzoqUZPj0svc02H0CGD897d3frgCMnxHs2eHmAIyfkWzd46YAjJ8Rbdnl6gCMn5Gt3eeqAIyfGazZ6cMBGD8zeXSvDwVg/Mzokd3eDcD4mdm9/Rb9VQiYzc0A3P05gls7vhqA8XMk1/bsEYhoXwbg7s8RfbXrbz0uZDSXH796X0IX55/fe19Cd/+dAO7+HNnnfXsHINo/Abj7k+DvnTsBiPYnAHd/knzs3QlANAEQ7WlZPP6Q6fnl/O4EIJoAiCYAogmAaE9egEnmBCCaAIgmAKIJgGgCIJoAiHbyNWhZtf++2N/xluUEIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiHZ6fjm/976IGVx+/Op9Caucf37vfQlTcAI8aKZBzXStvQlghRmGNcM1jkQARBPASiPfYUe+tlEJYIMRhzbiNc1AABuNNLiRrmU2AtjB8OYngJ16R9D782cngIkZ/34CKKDHEI2/DAEU0nKQxl+OAAoyzPkIoLDaEYisLAFMxPjLE0AFNYZq/HUIoBKDnYMAKioVgZjqEUBle8dr/HUJYGDGX58AGtgyZONvQwCNGPSYBNDQoxGIpR0BNHZv3MbflgA6uDZy429PAEQTQCef7/bu/n08vb1eTr0vItXH6I2/n9OyLIv/H5RUHoGIJgCiPS3LsngPINHb6+XkBCCaAIj2JwCPQST52LsTgGgCINo/AXgMIsHfO3cCEO2/AJwCHNnnfTsBiPZlAE4BjuirXTsBiHY1AKcAR3JtzzdPABFwBLd27BGIQ7t3E78bgFOAI3voBBABM3pktw8/AomAmTy611XvACJgBmt2uvolWASMbO0+N30LJAJGtGWXm78GFQEj2brHXf8OIAJGsGeHRQbsf5ajhxI34KJ3cCHQSqmnj6K/CuGRiBZK7qzaYJ0GlFbjBlv9ji0E9qr5ZNHskUUIrNXikbr5M7sQuKX1e2TXl1YxsCx9vzz5DeO0/jicihfgAAAAAElFTkSuQmCC">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAELElEQVR4nO3cy1XbUABFUZmVGXVQQIpwOakm5biIFEAdjMmIrITgj6T31d27AKzBPXqSAzktg3l+Ob/3vgbqenu9nHpfw4euF2LsLEvfIJp/sNFzS+sYmn2Y4bNWixiqf4Dhs1fNEKr9YMOntBohFP+Bhk9tJUN4KvWDlsX4aaPkzoqUZPj0svc02H0CGD897d3frgCMnxHs2eHmAIyfkWzd46YAjJ8Rbdnl6gCMn5Gt3eeqAIyfGazZ6cMBGD8zeXSvDwVg/Mzokd3eDcD4mdm9/Rb9VQiYzc0A3P05gls7vhqA8XMk1/bsEYhoXwbg7s8RfbXrbz0uZDSXH796X0IX55/fe19Cd/+dAO7+HNnnfXsHINo/Abj7k+DvnTsBiPYnAHd/knzs3QlANAEQ7WlZPP6Q6fnl/O4EIJoAiCYAogmAaE9egEnmBCCaAIgmAKIJgGgCIJoAiHbyNWhZtf++2N/xluUEIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiHZ6fjm/976IGVx+/Op9Caucf37vfQlTcAI8aKZBzXStvQlghRmGNcM1jkQARBPASiPfYUe+tlEJYIMRhzbiNc1AABuNNLiRrmU2AtjB8OYngJ16R9D782cngIkZ/34CKKDHEI2/DAEU0nKQxl+OAAoyzPkIoLDaEYisLAFMxPjLE0AFNYZq/HUIoBKDnYMAKioVgZjqEUBle8dr/HUJYGDGX58AGtgyZONvQwCNGPSYBNDQoxGIpR0BNHZv3MbflgA6uDZy429PAEQTQCef7/bu/n08vb1eTr0vItXH6I2/n9OyLIv/H5RUHoGIJgCiPS3LsngPINHb6+XkBCCaAIj2JwCPQST52LsTgGgCINo/AXgMIsHfO3cCEO2/AJwCHNnnfTsBiPZlAE4BjuirXTsBiHY1AKcAR3JtzzdPABFwBLd27BGIQ7t3E78bgFOAI3voBBABM3pktw8/AomAmTy611XvACJgBmt2uvolWASMbO0+N30LJAJGtGWXm78GFQEj2brHXf8OIAJGsGeHRQbsf5ajhxI34KJ3cCHQSqmnj6K/CuGRiBZK7qzaYJ0GlFbjBlv9ji0E9qr5ZNHskUUIrNXikbr5M7sQuKX1e2TXl1YxsCx9vzz5DeO0/jicihfgAAAAAElFTkSuQmCC">
+<style>
+:root{
+  --navy:#0B2545; --navy2:#13315C; --navy3:#1c4370; --accent:#C69214; --accent-light:#e8c866;
+  --blue:#1F6FEB; --green:#1a7f37; --red:#c0392b; --gray:#5a6472; --line:#dde3ec;
+  --bg:#eef1f6; --card:#ffffff; --good-bg:#dff3e0; --bad-bg:#fbe1de; --gray-bg:#eceff3;
+  --shadow-sm:0 1px 2px rgba(11,37,69,.05), 0 1px 3px rgba(11,37,69,.06);
+  --shadow-md:0 2px 6px rgba(11,37,69,.07), 0 6px 18px rgba(11,37,69,.06);
+  --shadow-lg:0 8px 28px rgba(11,37,69,.14), 0 2px 8px rgba(11,37,69,.08);
+}
+*{box-sizing:border-box;}
+::selection{background:var(--accent-light);color:#2a1e00;}
+body{margin:0;font-family:"Sarabun","Segoe UI",Tahoma,sans-serif;background:var(--bg);color:#1c2530;line-height:1.6;font-size:14.5px;-webkit-font-smoothing:antialiased;}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 15% 0%, rgba(31,111,235,.05), transparent 45%),radial-gradient(circle at 100% 30%, rgba(198,146,20,.05), transparent 40%);pointer-events:none;z-index:0;}
+header{position:relative;background:linear-gradient(120deg,var(--navy) 0%,var(--navy2) 55%,var(--navy3) 100%);color:#fff;padding:26px 30px;box-shadow:0 4px 22px rgba(11,37,69,.25);overflow:hidden;}
+header::after{content:"";position:absolute;top:-60%;right:-6%;width:420px;height:420px;background:radial-gradient(circle, rgba(198,146,20,.22), transparent 70%);pointer-events:none;}
+header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);background-size:26px 26px;pointer-events:none;}
+header h1{position:relative;margin:0 0 4px;font-size:23px;font-weight:700;letter-spacing:.2px;}
+header p{position:relative;margin:0;font-size:13px;color:#cfe0f7;}
+.tag{position:relative;display:inline-block;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-light) 100%);color:#2a1e00;font-weight:800;padding:4px 13px;border-radius:4px;font-size:11.5px;letter-spacing:.6px;margin-bottom:10px;box-shadow:0 2px 8px rgba(198,146,20,.35);}
+.wrap{max-width:1500px;margin:0 auto;padding:22px 20px;position:relative;z-index:1;}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;}
+@media(max-width:980px){.grid{grid-template-columns:1fr;}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:18px;box-shadow:var(--shadow-sm);transition:box-shadow .25s ease, transform .25s ease;animation:fadeUp .45s ease both;}
+.card:hover{box-shadow:var(--shadow-md);}
+.grid>div:nth-child(1) .card:nth-child(1){animation-delay:.02s;}
+.grid>div:nth-child(1) .card:nth-child(2){animation-delay:.08s;}
+.grid>div:nth-child(1) .card:nth-child(3){animation-delay:.14s;}
+.grid>div:nth-child(2) .card:nth-child(1){animation-delay:.06s;}
+.grid>div:nth-child(2) .card:nth-child(2){animation-delay:.12s;}
+.grid>div:nth-child(2) .card:nth-child(3){animation-delay:.18s;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.card h2{font-size:15px;color:var(--navy);margin:0 0 14px;padding-bottom:9px;border-bottom:2px solid var(--accent);display:flex;align-items:center;gap:8px;font-weight:700;letter-spacing:.1px;}
+.card h3{font-size:13px;color:var(--navy2);margin:14px 0 6px;font-weight:700;}
+label{display:block;font-size:12.5px;color:var(--navy2);font-weight:600;margin-bottom:3px;}
+.field{margin-bottom:11px;}
+.field .hint{font-size:10.8px;color:var(--gray);margin-top:2px;}
+input[type=number],input[type=text],select{
+  width:100%;padding:7px 9px;border:1.5px solid var(--line);border-radius:6px;font-size:13.5px;
+  background:#fffdf6;color:#1c2530;font-family:inherit;transition:border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+input[type=number]:hover,select:hover{border-color:#b8c4d6;}
+input[type=number]:focus,select:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(31,111,235,.14);}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+table{width:100%;border-collapse:collapse;font-size:12.5px;}
+th,td{border:1px solid var(--line);padding:5px 6px;text-align:center;}
+th{background:var(--navy);color:#fff;font-weight:600;font-size:11.5px;}
+.coord-table input{padding:4px 4px;font-size:12px;text-align:center;}
+.coord-table td{padding:2px;}
+.coord-table tbody tr:hover td{background:#fbf6e6;}
+.small-btn{background:var(--navy2);color:#fff;border:none;padding:4px 10px;border-radius:5px;font-size:11.5px;cursor:pointer;}
+.small-btn:hover{background:var(--navy);}
+svg#diagram{width:100%;height:auto;background:linear-gradient(180deg,#fbfcfe 0%, #f5f8fc 100%);border:1px solid var(--line);border-radius:10px;box-shadow:inset 0 1px 3px rgba(11,37,69,.04);}
+.verdict-banner{padding:19px 20px;border-radius:12px;text-align:center;font-size:20px;font-weight:800;margin-bottom:14px;transition:.3s ease;letter-spacing:.2px;}
+.verdict-ok{background:linear-gradient(135deg,#dff3e0,#eaf8ea);color:var(--green);border:2px solid var(--green);box-shadow:0 4px 16px rgba(26,127,55,.16);}
+.verdict-ng{background:linear-gradient(135deg,#fbe1de,#fdeceb);color:var(--red);border:2px solid var(--red);box-shadow:0 4px 16px rgba(192,57,43,.16);animation:pulseNg 2.2s ease-in-out infinite;}
+@keyframes pulseNg{0%,100%{box-shadow:0 4px 16px rgba(192,57,43,.16);}50%{box-shadow:0 4px 22px rgba(192,57,43,.30);}}
+.dcr-row{display:flex;justify-content:space-between;background:#f7f9fc;padding:9px 14px;border-radius:7px;margin-bottom:6px;font-size:13px;border:1px solid transparent;transition:border-color .15s;}
+.dcr-row:hover{border-color:var(--line);}
+.dcr-row b{font-variant-numeric:tabular-nums;}
+.pass{color:var(--green);font-weight:700;}
+.fail{color:var(--red);font-weight:700;}
+.na{color:#9aa4b2;font-style:italic;}
+.mode-row{display:grid;grid-template-columns:2fr 1fr 1fr 90px;gap:8px;align-items:center;padding:6px 5px;border-bottom:1px solid var(--line);font-size:12.5px;transition:background .15s;}
+.mode-row:hover{background:#f7f9fc;}
+.mode-row.govern{background:#fff7e0;font-weight:700;}
+.mode-row.govern:hover{background:#fef0c9;}
+.mode-row .bar-wrap{background:#eef2f8;border-radius:4px;overflow:hidden;height:14px;}
+.mode-row .bar{background:linear-gradient(90deg,var(--blue),#4c8bf0);height:100%;border-radius:4px;transition:width .4s ease;}
+.mode-row.na .bar{background:#c7cdd6;}
+details{border:1px solid var(--line);border-radius:10px;margin-bottom:9px;background:#fafbfd;overflow:hidden;transition:box-shadow .2s;}
+details[open]{box-shadow:var(--shadow-sm);}
+details summary{cursor:pointer;padding:11px 15px;font-weight:700;color:var(--navy2);font-size:13.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;transition:background .15s;}
+details summary:hover{background:#f2f5fa;}
+details summary::-webkit-details-marker{display:none;}
+details summary:after{content:"▾";transition:transform .25s ease;color:var(--accent);font-size:16px;}
+details[open] summary:after{transform:rotate(180deg);}
+.step{padding:11px 17px;font-size:12.8px;color:#333;border-top:1px solid var(--line);}
+.step .line{margin:5px 0;}
+.step .formula{background:#f7f9fc;border-left:3px solid var(--blue);padding:8px 11px;margin:7px 0;font-family:"Cambria Math","Sarabun",serif;font-size:12.8px;border-radius:0 6px 6px 0;}
+.step .result{background:#eef7ee;border:1px solid #b7dfb9;border-radius:6px;padding:8px 11px;margin:7px 0;font-weight:700;}
+.step .warn{background:#fdecea;border:1px solid #f3b3ac;border-radius:6px;padding:8px 11px;margin:7px 0;}
+.badge{display:inline-block;padding:2px 9px;border-radius:10px;font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.2px;}
+.badge-adhesive{background:var(--blue);} .badge-castin{background:var(--green);} .badge-mech{background:var(--accent);color:#2a1e00;}
+footer{text-align:center;padding:24px 20px;color:var(--gray);font-size:11.5px;border-top:1px solid var(--line);margin-top:10px;}
+.legend-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;}
+.two-col-outputs{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:980px){.two-col-outputs{grid-template-columns:1fr;}}
+::-webkit-scrollbar{width:10px;height:10px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:#c3cddb;border-radius:5px;}
+::-webkit-scrollbar-thumb:hover{background:#a8b5c8;}
+
+/* ---- print & email toolbar ---- */
+.action-toolbar{position:sticky;top:10px;z-index:50;display:flex;gap:10px;justify-content:flex-end;margin-bottom:14px;flex-wrap:wrap;}
+.action-btn{background:var(--navy);color:#fff;border:none;padding:9px 16px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:7px;box-shadow:var(--shadow-sm);transition:.15s;}
+.action-btn:hover{background:var(--navy2);transform:translateY(-1px);box-shadow:var(--shadow-md);}
+.action-btn.email{background:var(--accent);color:#2a1e00;}
+.action-btn.email:hover{background:#b3820f;}
+.print-options{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:14px;box-shadow:var(--shadow-md);display:none;}
+.print-options.open{display:block;}
+.print-options h4{margin:0 0 10px;font-size:13px;color:var(--navy);}
+.print-opt-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:12px;}
+.print-opt-row label{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:500;color:#333;cursor:pointer;}
+.print-opt-row input[type=checkbox]{width:15px;height:15px;cursor:pointer;accent-color:var(--navy);}
+@media print{
+  .action-toolbar,.print-options,.viewbar,footer,header .tag{display:none!important;}
+  body::before{display:none!important;}
+  body.hide-inputs .card:has(#anchorType),
+  body.hide-inputs .card:has(#coordTable),
+  body.hide-inputs .card:has(#Nua){display:none!important;}
+  body.hide-diagram .card:has(#diagram){display:none!important;}
+  body.hide-verdict .card:has(#verdictBanner){display:none!important;}
+  body.hide-bars .card:has(#modeBars){display:none!important;}
+  body.hide-detail .card:has(#detailSteps){display:none!important;}
+  details{page-break-inside:avoid;}
+  .card{box-shadow:none!important;border:1px solid #ccc!important;}
+}
+.viewbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center;}
+.viewbtn{background:#eef2f8;color:var(--navy2);border:1.5px solid var(--line);padding:7px 14px;border-radius:20px;font-size:12.5px;font-weight:600;cursor:pointer;transition:.15s;font-family:inherit;}
+.viewbtn:hover{background:#e0e8f4;transform:translateY(-1px);}
+.viewbtn.active{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 3px 10px rgba(11,37,69,.25);}
+.viewbtn,.dimbtn{will-change:transform;}
+.dimbtn{margin-left:auto;background:#fff;border:1.5px solid var(--accent);color:#7a5a00;padding:7px 14px;border-radius:20px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:6px;transition:.15s;}
+.dimbtn:hover{background:#fdf6e3;transform:translateY(-1px);}
+.dimbtn.active{background:var(--accent);color:#2a1e00;box-shadow:0 3px 10px rgba(198,146,20,.3);}
+.dimbtn .dot{width:8px;height:8px;border-radius:50%;background:#c7cdd6;transition:.15s;}
+.dimbtn.active .dot{background:#2a1e00;}
+
+/* ---- summary panel (auto values) ---- */
+.summary-panel{margin-top:14px;background:linear-gradient(160deg,#f7f9fc 0%,#eef2f8 100%);border:1px solid var(--line);border-radius:10px;padding:14px 16px;}
+.summary-panel h4{margin:0 0 10px;font-size:11.5px;color:var(--navy2);text-transform:uppercase;letter-spacing:.6px;font-weight:700;}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px;}
+.summary-item{background:#fff;border:1px solid var(--line);border-radius:7px;padding:7px 8px;text-align:center;transition:transform .15s, box-shadow .15s;}
+.summary-item:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm);border-color:#c3cddb;}
+.summary-item .val{font-size:15px;font-weight:800;color:var(--navy);font-variant-numeric:tabular-nums;}
+.summary-item .lbl{font-size:10px;color:var(--gray);margin-top:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="tag">ACI 318-25 — CHAPTER 17</span>
+  <h1>โปรแกรมออกแบบ Anchor to Concrete (เวอร์ชันเว็บ)</h1>
+  <p>ฉบับสมบูรณ์ — ครบทุกโหมดการวิบัติ | ผังตำแหน่งแบบพิกัด (X,Y) สูงสุด 12 ดอก | คำนวณและอัปเดตผลแบบเรียลไทม์</p>
+</header>
+
+<div class="wrap">
+
+<div class="action-toolbar">
+  <button class="action-btn" id="installBtn" style="display:none;background:#1a7f37;" onclick="installApp()">📲 ติดตั้งแอปนี้</button>
+  <button class="action-btn" onclick="togglePrintOptions()">🖨️ พิมพ์ / บันทึก PDF</button>
+  <button class="action-btn email" onclick="sendEmail()">📧 ส่งอีเมลสรุปผล</button>
+</div>
+
+<div class="print-options" id="printOptions">
+  <h4>เลือกส่วนที่ต้องการพิมพ์ (Select sections to print)</h4>
+  <div class="print-opt-row">
+    <label><input type="checkbox" id="pOptInputs" checked> ข้อมูลนำเข้า (Inputs)</label>
+    <label><input type="checkbox" id="pOptDiagram" checked> ผังตำแหน่ง/รูปตัด (Diagram)</label>
+    <label><input type="checkbox" id="pOptVerdict" checked> ผลตรวจสอบ/DCR (Verdict)</label>
+    <label><input type="checkbox" id="pOptBars" checked> กราฟเปรียบเทียบกำลัง (Bar Chart)</label>
+    <label><input type="checkbox" id="pOptDetail" checked> รายการคำนวณโดยละเอียด (Full Calculation)</label>
+  </div>
+  <button class="action-btn" onclick="doPrint()">✓ พิมพ์เดี๋ยวนี้ (Print Now)</button>
+</div>
+
+<div class="card" id="titleBlockCard" style="margin-bottom:20px;">
+  <h2>📋 ข้อมูลโครงการและผู้ออกแบบ (Project Information)</h2>
+  <div class="row3">
+    <div class="field"><label>โครงการก่อสร้าง (Project Name)</label><input type="text" id="projName" placeholder="เช่น อาคารคลังสินค้า ABC"></div>
+    <div class="field"><label>ชื่อชิ้นส่วน/ตำแหน่งที่ออกแบบ (Element / Location)</label><input type="text" id="projElement" placeholder="เช่น Base Plate เสา C4 แกน 3-C"></div>
+    <div class="field"><label>เลขที่รายการคำนวณ (Calc No.)</label><input type="text" id="projCalcNo" placeholder="เช่น CAL-ANC-001"></div>
+  </div>
+  <div class="row3">
+    <div class="field"><label>ผู้ออกแบบ (Designed by)</label><input type="text" id="projDesigner" placeholder="ชื่อ-นามสกุล วิศวกรผู้ออกแบบ"></div>
+    <div class="field"><label>ผู้ตรวจสอบ (Checked by)</label><input type="text" id="projChecker" placeholder="ชื่อ-นามสกุล ผู้ตรวจสอบ"></div>
+    <div class="field"><label>วันที่ (Date)</label><input type="text" id="projDate" placeholder="วว/ดด/ปปปป"></div>
+  </div>
+</div>
+
+<div class="grid">
+  <!-- ============ LEFT: INPUTS ============ -->
+  <div>
+    <div class="card">
+      <h2>1. ชนิด Anchor และวัสดุ</h2>
+      <div class="field">
+        <label>ชนิด Anchor (Anchor Type)</label>
+        <select id="anchorType">
+          <option value="Adhesive">Adhesive (Post-installed)</option>
+          <option value="Castin">Cast-in Headed Anchor</option>
+          <option value="Mechanical">Mechanical (Post-installed)</option>
+        </select>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>ขนาด Anchor</label>
+          <select id="anchorSize"></select>
+        </div>
+        <div class="field">
+          <label>เกรดเหล็ก (เลือกหรือป้อนค่าเองด้านล่าง)</label>
+          <select id="steelGrade"></select>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>f<sub>ya</sub> (กำลังจุดคราก, ksc) — แก้ไขได้</label>
+          <input type="number" id="fyaInput" value="3200" step="10">
+        </div>
+        <div class="field">
+          <label>f<sub>uta</sub> (กำลังดึงประลัย, ksc) — แก้ไขได้</label>
+          <input type="number" id="futaInput" value="4000" step="10">
+        </div>
+      </div>
+      <div id="adhesiveFields">
+        <div class="row2">
+          <div class="field">
+            <label>ผลิตภัณฑ์ Adhesive</label>
+            <select id="adhesiveProduct"></select>
+          </div>
+          <div class="field">
+            <label>สภาพคอนกรีต/รูเจาะ</label>
+            <select id="concreteCond">
+              <option value="cracked">คอนกรีตแตกร้าว (Cracked)</option>
+              <option value="uncr_dry">ไม่แตกร้าว รูแห้ง (Uncracked-Dry)</option>
+              <option value="uncr_wet">ไม่แตกร้าว รูเปียก (Uncracked-Wet)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>f'c (กำลังอัดคอนกรีต, ksc)</label>
+          <input type="number" id="fc" value="210" step="10">
+        </div>
+        <div class="field">
+          <label>hef (ความลึกฝังยึด, cm)</label>
+          <input type="number" id="hef" value="9.0" step="0.5">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>2. ผังตำแหน่ง Anchor แบบพิกัด (สูงสุด 12 ดอก)</h2>
+      <div class="row3">
+        <div class="field"><label>Panel Width (X), cm</label><input type="number" id="panelW" value="30"></div>
+        <div class="field"><label>Panel Height (Y), cm</label><input type="number" id="panelH" value="85"></div>
+        <div class="field"><label>ha (ความหนาคอนกรีต), cm</label><input type="number" id="ha" value="85"></div>
+      </div>
+      <table class="coord-table" id="coordTable">
+        <thead><tr><th>#</th><th>X (cm)</th><th>Y (cm)</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <p class="hint">เว้นว่างแถวที่ไม่ใช้งาน — พิกัดวัดจาก<b>จุดศูนย์กลางแผ่นคอนกรีต (0,0)</b> — ใช้ค่าลบสำหรับตำแหน่งซ้าย/ล่างของจุดศูนย์กลาง</p>
+    </div>
+
+    <div class="card">
+      <h2>3. แรงกระทำ ทิศทาง และความเยื้องศูนย์</h2>
+      <div class="row2">
+        <div class="field"><label>Nua : แรงดึงรวมกลุ่ม (kg)</label><input type="number" id="Nua" value="1500"></div>
+        <div class="field"><label>Vua : แรงเฉือนรวมกลุ่ม (kg)</label><input type="number" id="Vua" value="1500"></div>
+      </div>
+      <div class="field">
+        <label>ทิศทางแรงเฉือน</label>
+        <select id="shearDir">
+          <option value="down">ลงล่าง (ตั้งฉาก ca2,bottom)</option>
+          <option value="up">ขึ้นบน (ตั้งฉาก ca2,top)</option>
+          <option value="left">ไปทางซ้าย (ตั้งฉาก ca1,left)</option>
+          <option value="right">ไปทางขวา (ตั้งฉาก ca1,right)</option>
+        </select>
+      </div>
+      <div class="row2">
+        <div class="field"><label>e'N : ความเยื้องศูนย์แรงดึง (cm)</label><input type="number" id="eN" value="5.0"></div>
+        <div class="field"><label>e'V : ความเยื้องศูนย์แรงเฉือน (cm)</label><input type="number" id="eV" value="5.0"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ RIGHT: DIAGRAM + VERDICT ============ -->
+  <div>
+    <div class="card">
+      <h2>ผังตำแหน่ง Bolt / รูปตัด (อัปเดตอัตโนมัติ)</h2>
+      <div class="viewbar">
+        <button class="viewbtn active" data-view="plan" onclick="setView('plan')">🔲 ผังบน (Plan View)</button>
+        <button class="viewbtn" data-view="sectionX" onclick="setView('sectionX')">📐 รูปตัด X-X</button>
+        <button class="viewbtn" data-view="sectionY" onclick="setView('sectionY')">📐 รูปตัด Y-Y</button>
+        <button class="dimbtn" id="labelModeBtn" onclick="toggleLabelMode()" style="margin-left:auto;">🏷️ ป้ายกำกับ: <span id="labelModeText">พิกัด (X,Y)</span></button>
+        <button class="dimbtn active" id="dimToggleBtn" onclick="toggleDims()"><span class="dot"></span>แสดงเส้นบอกระยะ</button>
+      </div>
+      <svg id="diagram" viewBox="0 0 500 500"></svg>
+      <p class="hint" id="geomSummary"></p>
+      <div class="summary-panel" id="summaryPanel">
+        <h4 style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;" onclick="toggleSummaryPanel()">
+          <span>ค่าสรุปตัวแปรหลัก (Key Values Summary)</span>
+          <span id="summaryToggleIcon" style="color:var(--accent);font-size:14px;">▾</span>
+        </h4>
+        <div class="summary-grid" id="summaryGrid"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>ผลการตรวจสอบขั้นสุดท้าย</h2>
+      <div id="verdictBanner" class="verdict-banner">—</div>
+      <div class="dcr-row"><span>φNn (ค่าควบคุมแรงดึง)</span><b id="phiNnOut">—</b></div>
+      <div class="dcr-row"><span>φVn (ค่าควบคุมแรงเฉือน)</span><b id="phiVnOut">—</b></div>
+      <div class="dcr-row"><span>Nua/φNn</span><b id="ratioNOut">—</b></div>
+      <div class="dcr-row"><span>Vua/φVn</span><b id="ratioVOut">—</b></div>
+      <div class="dcr-row"><span>ผลรวม (≤1.2)</span><b id="ratioSumOut">—</b></div>
+    </div>
+
+    <div class="card">
+      <h2>เปรียบเทียบกำลังต้านทานแต่ละโหมด (kg)</h2>
+      <div id="modeBars"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DETAILED CALCULATION STEPS ============ -->
+<div class="card">
+  <h2>รายการคำนวณโดยละเอียด (ตาม ACI 318-25 บทที่ 17)</h2>
+  <div id="reportTitleBlock" style="background:#f7f9fc;border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:var(--navy2);"></div>
+  <div id="detailSteps"></div>
+</div>
+
+</div>
+
+<footer>โปรแกรมนี้จัดทำเพื่อการศึกษาและอ้างอิงประกอบการออกแบบเบื้องต้นเท่านั้น — วิศวกรผู้ออกแบบต้องตรวจสอบผลลัพธ์และอ้างอิง ACI 318-25 ฉบับสมบูรณ์เสมอ | หน่วย: กิโลกรัม-เซนติเมตร (kg-cm)</footer>
+
+<script>
+/* ============================================================
+   MATERIAL DATABASE (mirrors DATA-วัสดุ sheet in the Excel tool)
+   ============================================================ */
+const ANCHOR_SIZES = {
+  M8:  {da:0.8, Ase:0.366, Abrg:2.9},
+  M10: {da:1.0, Ase:0.580, Abrg:3.8},
+  M12: {da:1.2, Ase:0.843, Abrg:4.9},
+  M16: {da:1.6, Ase:1.570, Abrg:7.2},
+  M20: {da:2.0, Ase:2.450, Abrg:6.5},
+  M24: {da:2.4, Ase:3.530, Abrg:10.5},
+};
+const STEEL_GRADES = {
+  "ASTM F1554 Gr.36":  {fya:2530, futa:4080},
+  "ASTM F1554 Gr.55":  {fya:3870, futa:5620},
+  "ASTM F1554 Gr.105": {fya:7380, futa:8790},
+  "SS400 Threaded Rod":{fya:2530, futa:4080},
+  "กำหนดเอง (futa=4000ksc)": {fya:3200, futa:4000},
+};
+const ADHESIVE_PRODUCTS = {
+  "Hilti HIT-RE 500 V3": {uncr:88.0, cr:44.2, wet:22.5},
+  "Hilti HIT-HY 200 V3": {uncr:70.0, cr:35.0, wet:25.0},
+  "Sika AnchorFix-3001": {uncr:65.0, cr:32.0, wet:22.0},
+  "Fischer FIS EM Plus": {uncr:60.0, cr:30.0, wet:20.0},
+  "กำหนดเอง (Custom)":    {uncr:88.0, cr:44.2, wet:22.5},
+};
+const MECH_PULLOUT = {
+  M8:{uncr:2150,cr:1350}, M10:{uncr:3100,cr:2000}, M12:{uncr:4500,cr:2900},
+  M16:{uncr:7500,cr:5000}, M20:{uncr:11500,cr:7750}, M24:{uncr:11500,cr:7750},
+};
+const CONST = {kc_castin:24, kc_post:17, kcp_lo:1.0, kcp_hi:2.0, lambda:1.0, refBond:77.34};
+const PHI = {steelT:0.65, steelV:0.60, bond:0.65, pullout:0.70, breakoutT:0.65, blowout:0.65, breakoutV:0.70, pryout:0.70};
+
+/* ============================================================
+   POPULATE DROPDOWNS
+   ============================================================ */
+function fillSelect(id, obj){
+  const el = document.getElementById(id);
+  el.innerHTML = Object.keys(obj).map(k=>`<option value="${k}">${k}</option>`).join('');
+}
+fillSelect('anchorSize', ANCHOR_SIZES);
+document.getElementById('anchorSize').value = 'M12';
+fillSelect('steelGrade', STEEL_GRADES);
+document.getElementById('steelGrade').value = 'กำหนดเอง (futa=4000ksc)';
+fillSelect('adhesiveProduct', ADHESIVE_PRODUCTS);
+
+// auto-fill fya/futa inputs when a preset grade is chosen (still editable afterward)
+function applySteelGradePreset(){
+  const g = STEEL_GRADES[document.getElementById('steelGrade').value];
+  if(g){ document.getElementById('fyaInput').value = g.fya; document.getElementById('futaInput').value = g.futa; }
+}
+document.getElementById('steelGrade').addEventListener('change', applySteelGradePreset);
+applySteelGradePreset();
+
+/* ============================================================
+   COORDINATE TABLE (12 rows, default = 2x2 matching verified baseline)
+   ============================================================ */
+const DEFAULT_BOLTS = [
+  [-7.5,-7.5], [7.5,-7.5], [-7.5,7.5], [7.5,7.5], [], [], [], [], [], [], [], []
+];
+const tbody = document.querySelector('#coordTable tbody');
+for(let i=0;i<12;i++){
+  const tr = document.createElement('tr');
+  const xv = DEFAULT_BOLTS[i][0] ?? '';
+  const yv = DEFAULT_BOLTS[i][1] ?? '';
+  tr.innerHTML = `<td>${i+1}</td><td><input type="number" class="bx" step="0.5" value="${xv}"></td><td><input type="number" class="by" step="0.5" value="${yv}"></td>`;
+  tbody.appendChild(tr);
+}
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+const $ = id => document.getElementById(id);
+const fmt = n => (n===null||n===undefined||isNaN(n)) ? 'N/A' : n.toLocaleString('en-US',{maximumFractionDigits:0});
+const fmt3 = n => (n===null||n===undefined||isNaN(n)) ? 'N/A' : n.toFixed(3);
+
+function getBolts(){
+  const xs = document.querySelectorAll('.bx');
+  const ys = document.querySelectorAll('.by');
+  const bolts = [];
+  for(let i=0;i<xs.length;i++){
+    const xv = xs[i].value, yv = ys[i].value;
+    if(xv!=='' && yv!==''){
+      bolts.push({x:parseFloat(xv), y:parseFloat(yv), id:i+1});
+    }
+  }
+  return bolts;
+}
+
+/* ============================================================
+   MAIN CALCULATION ENGINE — mirrors CALC-คำนวณ sheet exactly
+   ============================================================ */
+function calculate(){
+  const atype = $('anchorType').value; // Adhesive | Castin | Mechanical
+  const sizeKey = $('anchorSize').value;
+  const {da, Ase, Abrg} = ANCHOR_SIZES[sizeKey];
+  const fya = parseFloat($('fyaInput').value);
+  const futa = parseFloat($('futaInput').value);
+  const fc = parseFloat($('fc').value);
+  const hef = parseFloat($('hef').value);
+  const panelW = parseFloat($('panelW').value);
+  const panelH = parseFloat($('panelH').value);
+  const ha = parseFloat($('ha').value);
+  const Nua = parseFloat($('Nua').value);
+  const Vua = parseFloat($('Vua').value);
+  const eN = parseFloat($('eN').value);
+  const eV = parseFloat($('eV').value);
+  const shearDir = $('shearDir').value;
+  const cond = $('concreteCond').value;
+  const adhProd = ADHESIVE_PRODUCTS[$('adhesiveProduct').value];
+  const tau = cond==='cracked'?adhProd.cr : (cond==='uncr_dry'?adhProd.uncr:adhProd.wet);
+
+  const bolts = getBolts();
+  const n = bolts.length;
+  document.getElementById('adhesiveFields').style.display = (atype==='Adhesive')?'block':'none';
+
+  if(n===0){ return null; }
+
+  const xs = bolts.map(b=>b.x), ys = bolts.map(b=>b.y);
+  const xmin=Math.min(...xs), xmax=Math.max(...xs), ymin=Math.min(...ys), ymax=Math.max(...ys);
+  const ca1L = panelW/2 + xmin, ca1R = panelW/2 - xmax, ca2B = panelH/2 + ymin, ca2T = panelH/2 - ymax;
+  const extentX = xmax-xmin, extentY = ymax-ymin;
+  const caMin = Math.min(ca1L,ca1R,ca2T,ca2B);
+
+  const steps = {}; // collect for display
+
+  /* ---- Section 4: Steel ---- */
+  const Nsa = Ase*futa;
+  const futaCheck = futa <= Math.min(1.9*fya,8780);
+  const phiNsa1 = PHI.steelT*Nsa;
+  const phiNsaGrp = phiNsa1*n;
+  const Vsa = 0.6*Ase*futa;
+  const phiVsa1 = PHI.steelV*Vsa;
+  const phiVsaGrp = phiVsa1*n;
+  steps.steel = {Nsa,futaCheck,phiNsa1,phiNsaGrp,Vsa,phiVsa1,phiVsaGrp};
+
+  /* ---- Section 5A: Bond (Adhesive only) ---- */
+  const Nba = tau*Math.PI*da*hef;
+  const cNa = 10*da*Math.sqrt(tau/CONST.refBond);
+  const ANao = Math.pow(2*cNa,2);
+  const ANa = (Math.min(ca1L,cNa)+extentX+Math.min(ca1R,cNa)) * (Math.min(ca2T,cNa)+extentY+Math.min(ca2B,cNa));
+  const psiecNa = Math.min(1, 1/(1+eN/cNa));
+  const psiedNa = Math.min(1, 0.7+0.3*(caMin/cNa));
+  const Nag = (ANa/ANao)*psiecNa*psiedNa*Nba;
+  const phiNag = atype==='Adhesive' ? PHI.bond*Nag : null;
+  steps.bond = {Nba,cNa,ANao,ANa,psiecNa,psiedNa,Nag,phiNag,applicable:atype==='Adhesive'};
+
+  /* ---- Section 5B: Pullout (Cast-in / Mechanical) ---- */
+  const psicP = cond==='cracked' ? 1.0 : 1.4;
+  const Np_castin = 8*Abrg*fc;
+  const mech = MECH_PULLOUT[sizeKey] || {uncr:0,cr:0};
+  const Np_mech = cond==='cracked' ? mech.cr : mech.uncr;
+  const Np_used = atype==='Castin' ? Np_castin : (atype==='Mechanical' ? Np_mech : null);
+  const Npn = Np_used!==null ? psicP*Np_used : null;
+  const phiNpn = Npn!==null ? PHI.pullout*Npn*n : null;
+  steps.pullout = {psicP,Np_castin,Np_mech,Np_used,Npn,phiNpn,applicable:atype!=='Adhesive'};
+
+  /* ---- Section 6: Breakout Tension ---- */
+  const ANco = 9*hef*hef;
+  const lim15N = 1.5*hef;
+  const ANc = (Math.min(ca1L,lim15N)+extentX+Math.min(ca1R,lim15N)) * (Math.min(ca2T,lim15N)+extentY+Math.min(ca2B,lim15N));
+  const psiecN = Math.min(1, 1/(1+eN/lim15N));
+  const psiedN = Math.min(1, 0.7+0.3*(caMin/lim15N));
+  const kc = atype==='Castin' ? CONST.kc_castin : CONST.kc_post;
+  const Nb = kc*Math.sqrt(fc*14.223)*Math.pow(hef/2.54,1.5)*0.453592;
+  const Ncbg = (ANc/ANco)*psiecN*psiedN*Nb;
+  const phiNcbg = PHI.breakoutT*Ncbg;
+  steps.breakoutT = {ANco,lim15N,ANc,psiecN,psiedN,kc,Nb,Ncbg,phiNcbg};
+
+  /* ---- Section 7: Side-Face Blowout ---- */
+  const ca1MinSide = Math.min(ca1L,ca1R);
+  const lim04 = 0.4*hef;
+  const blowApplicable = (ca1MinSide < lim04) && (atype!=='Adhesive');
+  const Nsb = blowApplicable ? 160*(ca1MinSide/2.54)*Math.sqrt(Abrg/6.4516)*Math.sqrt(fc*14.223)*0.453592 : null;
+  const phiNsbg = blowApplicable ? PHI.blowout*Nsb*n : null;
+  steps.blowout = {ca1MinSide,lim04,blowApplicable,Nsb,phiNsbg};
+
+  /* ---- Section 8: Breakout Shear (4-direction) ---- */
+  let ca1eff,side1,side2,parspace;
+  if(shearDir==='down'){ ca1eff=ca2B; side1=ca1L; side2=ca1R; parspace=extentX; }
+  else if(shearDir==='up'){ ca1eff=ca2T; side1=ca1L; side2=ca1R; parspace=extentX; }
+  else if(shearDir==='left'){ ca1eff=ca1L; side1=ca2T; side2=ca2B; parspace=extentY; }
+  else { ca1eff=ca1R; side1=ca2T; side2=ca2B; parspace=extentY; }
+  const le = Math.min(hef, 8*da);
+  const Vba = 7*Math.pow(le/da,0.2)*Math.sqrt(da/2.54)*Math.sqrt(fc*14.223)*Math.pow(ca1eff/2.54,1.5)*0.453592;
+  const Vbb = 9*Math.sqrt(fc*14.223)*Math.pow(ca1eff/2.54,1.5)*0.453592;
+  const Vb = Math.min(Vba,Vbb);
+  const AVco = 4.5*ca1eff*ca1eff;
+  const lim15V = 1.5*ca1eff;
+  const AVc = (Math.min(side1,lim15V)+parspace+Math.min(side2,lim15V))*lim15V;
+  const psiecV = Math.min(1, 1/(1+eV/lim15V));
+  const psiedV = 0.7+0.3*(Math.min(side1,side2,lim15V)/lim15V);
+  const psihV = ha<lim15V ? Math.sqrt(lim15V/ha) : 1;
+  const Vcbg = (AVc/AVco)*psiecV*psiedV*psihV*Vb;
+  const phiVcbg = PHI.breakoutV*Vcbg;
+  steps.breakoutV = {ca1eff,side1,side2,parspace,le,Vba,Vbb,Vb,AVco,lim15V,AVc,psiecV,psiedV,psihV,Vcbg,phiVcbg,shearDir};
+
+  /* ---- Section 9: Pryout ---- */
+  const kcp = hef>=6.5 ? CONST.kcp_hi : CONST.kcp_lo;
+  const Vcpg = kcp*Ncbg;
+  const phiVcpg = PHI.pryout*Vcpg;
+  steps.pryout = {kcp,Vcpg,phiVcpg};
+
+  /* ---- Section 10: Summary & Interaction ---- */
+  const tensionModes = [
+    {label:'Steel (T)', val:phiNsaGrp, ref:'17.6.1.2'},
+    {label:'Bond (T)', val:phiNag, ref:'17.6.5', na: atype!=='Adhesive'},
+    {label:'Pullout (T)', val:phiNpn, ref:'17.6.3', na: atype==='Adhesive'},
+    {label:'Breakout (T)', val:phiNcbg, ref:'17.6.2'},
+    {label:'Side-Face Blowout (T)', val:phiNsbg, ref:'17.6.4', na: !blowApplicable},
+  ];
+  const shearModes = [
+    {label:'Steel (V)', val:phiVsaGrp, ref:'17.7.1.2'},
+    {label:'Breakout (V)', val:phiVcbg, ref:'17.7.2'},
+    {label:'Pryout (V)', val:phiVcpg, ref:'17.7.3'},
+  ];
+  const phiNn = Math.min(...tensionModes.filter(m=>m.val!==null && !isNaN(m.val)).map(m=>m.val));
+  const phiVn = Math.min(...shearModes.filter(m=>m.val!==null && !isNaN(m.val)).map(m=>m.val));
+  const ratioN = Nua/phiNn, ratioV = Vua/phiVn, ratioSum = ratioN+ratioV;
+  let ok;
+  if(ratioN<=0.2){ ok = ratioV<=1.0; }
+  else if(ratioV<=0.2){ ok = ratioN<=1.0; }
+  else{ ok = ratioSum<=1.2; }
+
+  return {
+    inputs:{atype,sizeKey,da,Ase,Abrg,fya,futa,fc,hef,panelW,panelH,ha,Nua,Vua,eN,eV,shearDir,cond,tau,n},
+    geom:{bolts,xmin,xmax,ymin,ymax,ca1L,ca1R,ca2T,ca2B,extentX,extentY,caMin},
+    steps, tensionModes, shearModes, phiNn, phiVn, ratioN, ratioV, ratioSum, ok
+  };
+}
+
+/* ============================================================
+   RENDER: SVG bolt-position diagram
+   ============================================================ */
+/* ---- color scheme by anchor material type (visual differentiation) ---- */
+function anchorColor(atype){
+  if(atype==='Adhesive') return {main:'#1F6FEB', light:'#DCE9FD', label:'Adhesive (Post-installed)'};
+  if(atype==='Castin')   return {main:'#1a7f37', light:'#DFF3E0', label:'Cast-in Headed Anchor'};
+  return {main:'#C69214', light:'#FBF0D6', label:'Mechanical (Post-installed)'};
+}
+
+/* ============================================================
+   VIEW STATE (Plan / Section X-X / Section Y-Y) + dimension toggle
+   ============================================================ */
+let currentView = 'plan';
+let showDims = true;
+let labelMode = 'coord'; // 'coord' = show (X,Y) | 'dim' = show spacing dimension lines
+let lastResult = null;
+
+function setView(v){
+  currentView = v;
+  document.querySelectorAll('.viewbtn').forEach(b=>b.classList.toggle('active', b.dataset.view===v));
+  if(lastResult) renderDiagram(lastResult);
+}
+function toggleDims(){
+  showDims = !showDims;
+  document.getElementById('dimToggleBtn').classList.toggle('active', showDims);
+  if(lastResult) renderDiagram(lastResult);
+}
+function toggleLabelMode(){
+  labelMode = (labelMode==='coord') ? 'dim' : 'coord';
+  document.getElementById('labelModeText').textContent = (labelMode==='coord') ? 'พิกัด (X,Y)' : 'ระยะห่าง (Spacing)';
+  document.getElementById('labelModeBtn').classList.toggle('active', labelMode==='dim');
+  if(lastResult) renderDiagram(lastResult);
+}
+function toggleSummaryPanel(){
+  const grid = document.getElementById('summaryGrid');
+  const icon = document.getElementById('summaryToggleIcon');
+  const hidden = grid.style.display==='none';
+  grid.style.display = hidden ? 'grid' : 'none';
+  icon.style.transform = hidden ? 'rotate(0deg)' : 'rotate(-90deg)';
+}
+
+/* ============================================================
+   PRINT (SELECTIVE) AND EMAIL
+   ============================================================ */
+function togglePrintOptions(){
+  document.getElementById('printOptions').classList.toggle('open');
+}
+
+/* ============================================================
+   PWA INSTALL (Android "Add to Home Screen" support)
+   ============================================================ */
+let deferredInstallPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  document.getElementById('installBtn').style.display = 'flex';
+});
+function installApp(){
+  if(!deferredInstallPrompt){
+    alert('หากปุ่มนี้ไม่ทำงาน: เปิดเมนู ⋮ ของ Chrome บนแอนดรอยด์ แล้วเลือก "เพิ่มไปยังหน้าจอหลัก" (Add to Home screen) ได้โดยตรง\\n\\nหมายเหตุ: การติดตั้งแบบเต็มรูปแบบต้องเปิดไฟล์นี้ผ่านเว็บที่มี HTTPS (เช่น อัปโหลดขึ้น GitHub Pages/Netlify) — เปิดจากไฟล์ในเครื่องโดยตรงจะยังใช้งานได้ปกติแต่ Chrome อาจไม่แสดงปุ่มติดตั้งอัตโนมัติ');
+    return;
+  }
+  deferredInstallPrompt.prompt();
+  deferredInstallPrompt.userChoice.then(()=>{ deferredInstallPrompt = null; document.getElementById('installBtn').style.display='none'; });
+}
+window.addEventListener('appinstalled', ()=>{ document.getElementById('installBtn').style.display='none'; });
+function doPrint(){
+  const map = {
+    pOptInputs:'hide-inputs', pOptDiagram:'hide-diagram', pOptVerdict:'hide-verdict',
+    pOptBars:'hide-bars', pOptDetail:'hide-detail'
+  };
+  Object.entries(map).forEach(([cbId,cls])=>{
+    const checked = document.getElementById(cbId).checked;
+    document.body.classList.toggle(cls, !checked);
+  });
+  // ensure details are expanded so printed content isn't collapsed/empty
+  document.querySelectorAll('#detailSteps details').forEach(d=>d.open=true);
+  window.print();
+}
+function sendEmail(){
+  if(!lastResult){ alert('กรุณาป้อนข้อมูลให้ครบถ้วนก่อน'); return; }
+  const r = lastResult;
+  const proj = document.getElementById('projName').value || '(ยังไม่ระบุโครงการ)';
+  const elem = document.getElementById('projElement').value || '(ยังไม่ระบุชิ้นส่วน)';
+  const designer = document.getElementById('projDesigner').value || '(ยังไม่ระบุผู้ออกแบบ)';
+  const subject = `รายงานผลตรวจสอบ Anchor to Concrete — ${proj} / ${elem}`;
+  const body =
+`สรุปผลการตรวจสอบ Anchor to Concrete (ACI 318-25 บทที่ 17)
+
+โครงการ: ${proj}
+ชิ้นส่วน/ตำแหน่ง: ${elem}
+ผู้ออกแบบ: ${designer}
+วันที่: ${document.getElementById('projDate').value || '-'}
+
+--- ข้อมูลนำเข้าหลัก ---
+ชนิด Anchor: ${document.getElementById('anchorType').selectedOptions[0].text}
+ขนาด: ${document.getElementById('anchorSize').value}
+จำนวน Anchor: ${r.inputs.n} ดอก
+Nua = ${r.inputs.Nua} kg, Vua = ${r.inputs.Vua} kg
+
+--- ผลการตรวจสอบ ---
+phiNn = ${fmt(r.phiNn)} kg
+phiVn = ${fmt(r.phiVn)} kg
+Nua/phiNn = ${r.ratioN.toFixed(3)}
+Vua/phiVn = ${r.ratioV.toFixed(3)}
+ผลรวม DCR = ${r.ratioSum.toFixed(3)} (เกณฑ์ <= 1.2)
+
+ผลสรุป: ${r.ok ? 'ผ่านเกณฑ์ (OK)' : 'ไม่ผ่านเกณฑ์ (NG) - ต้องปรับปรุงการออกแบบ'}
+
+---
+สร้างโดยโปรแกรมออกแบบ Anchor to Concrete (เวอร์ชันเว็บ) — ใช้เพื่อการศึกษาและอ้างอิงเบื้องต้นเท่านั้น กรุณาตรวจสอบโดยวิศวกรผู้เชี่ยวชาญก่อนใช้งานจริง`;
+  const mailto = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailto;
+}
+
+/* ---- professional CAD-style dimension line helpers (SVG string builders) ---- */
+const DIMCOLOR = '#3d4b5c';
+function svgDefs(){
+  return `<defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="7" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#1F6FEB"/></marker>
+    <marker id="arrowheadRed" markerWidth="10" markerHeight="10" refX="7" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#C0392B"/></marker>
+    <marker id="arrowheadGray" markerWidth="10" markerHeight="10" refX="7" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#9aa4b2"/></marker>
+    <marker id="dimArrow" markerWidth="9" markerHeight="9" refX="4.5" refY="2.5" orient="auto-start-reverse"><polygon points="0 0, 9 2.5, 0 5" fill="${DIMCOLOR}"/></marker>
+  </defs>`;
+}
+function dimH(x1,x2,y,label){
+  const midx=(x1+x2)/2;
+  const w = Math.max(30, label.length*6.2+8);
+  let s = `<line x1="${x1}" y1="${y-6}" x2="${x1}" y2="${y+6}" stroke="${DIMCOLOR}" stroke-width="1"/>`;
+  s += `<line x1="${x2}" y1="${y-6}" x2="${x2}" y2="${y+6}" stroke="${DIMCOLOR}" stroke-width="1"/>`;
+  s += `<line x1="${x1}" y1="${y}" x2="${x2}" y2="${y}" stroke="${DIMCOLOR}" stroke-width="1.1" marker-start="url(#dimArrow)" marker-end="url(#dimArrow)"/>`;
+  s += `<rect x="${midx-w/2}" y="${y-15}" width="${w}" height="13" fill="white" opacity="0.9" rx="2"/>`;
+  s += `<text x="${midx}" y="${y-5}" font-size="10.5" fill="${DIMCOLOR}" text-anchor="middle" font-weight="700">${label}</text>`;
+  return s;
+}
+function dimV(x,y1,y2,label,labelSide){
+  labelSide = labelSide||'right';
+  const midy=(y1+y2)/2;
+  let s = `<line x1="${x-6}" y1="${y1}" x2="${x+6}" y2="${y1}" stroke="${DIMCOLOR}" stroke-width="1"/>`;
+  s += `<line x1="${x-6}" y1="${y2}" x2="${x+6}" y2="${y2}" stroke="${DIMCOLOR}" stroke-width="1"/>`;
+  s += `<line x1="${x}" y1="${y1}" x2="${x}" y2="${y2}" stroke="${DIMCOLOR}" stroke-width="1.1" marker-start="url(#dimArrow)" marker-end="url(#dimArrow)"/>`;
+  const w = Math.max(30, label.length*6.2+8);
+  const lx = labelSide==='right' ? x+8 : x-8-w;
+  s += `<rect x="${lx}" y="${midy-7}" width="${w}" height="13" fill="white" opacity="0.9" rx="2"/>`;
+  s += `<text x="${lx+w/2}" y="${midy+3}" font-size="10.5" fill="${DIMCOLOR}" text-anchor="middle" font-weight="700">${label}</text>`;
+  return s;
+}
+
+/* ============================================================
+   RENDER: dispatcher
+   ============================================================ */
+function renderDiagram(res){
+  lastResult = res;
+  const svg = document.getElementById('diagram');
+  if(!res){ svg.innerHTML = '<text x="20" y="40" fill="#c0392b">กรุณาป้อนพิกัด Anchor อย่างน้อย 1 ดอก</text>'; return; }
+  if(currentView==='plan') renderPlanView(res);
+  else if(currentView==='sectionX') renderSectionView(res,'X');
+  else renderSectionView(res,'Y');
+  renderSummaryPanel(res);
+}
+
+/* ---- PLAN VIEW ---- */
+function renderPlanView(res){
+  const svg = document.getElementById('diagram');
+  const {panelW,panelH,shearDir,Nua,Vua} = res.inputs;
+  const pad = 60;
+  const availW = 500-2*pad, availH = 500-2*pad;
+  const scale = Math.min(availW/panelW, availH/panelH);
+  const cx = 250, cy = 250;
+  const toSvgX = x => cx + x*scale;
+  const toSvgY = y => cy - y*scale;
+  const left = toSvgX(-panelW/2), top = toSvgY(panelH/2), right = toSvgX(panelW/2), bot = toSvgY(-panelH/2);
+  const acol = anchorColor(res.inputs.atype);
+
+  let svgH = svgDefs();
+  svgH += `<marker id="cutArrow" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#111"/></marker>`;
+  svgH += `<filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0B2545" flood-opacity="0.22"/></filter>`;
+  svgH += `<filter id="cardShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0B2545" flood-opacity="0.13"/></filter>`;
+  svgH += `<linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f3f7fc"/><stop offset="100%" stop-color="#e4ebf5"/></linearGradient>`;
+
+  // ---- concrete panel (with soft shadow + gradient for depth) ----
+  svgH += `<rect x="${left}" y="${top}" width="${panelW*scale}" height="${panelH*scale}" fill="url(#panelGrad)" stroke="#0B2545" stroke-width="2.2" rx="2" filter="url(#softShadow)"/>`;
+  svgH += `<line x1="${toSvgX(-panelW/2-0.5)}" y1="${cy}" x2="${toSvgX(panelW/2+0.5)}" y2="${cy}" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/>`;
+  svgH += `<line x1="${cx}" y1="${toSvgY(panelH/2+0.5)}" x2="${cx}" y2="${toSvgY(-panelH/2-0.5)}" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/>`;
+  svgH += `<circle cx="${cx}" cy="${cy}" r="3" fill="#c0392b"/>`;
+  svgH += `<text x="${cx+6}" y="${cy-20}" font-size="10" fill="#c0392b">(0,0) ศูนย์กลาง</text>`;
+
+  // ---- Section-cut symbols ----
+  const cutY = toSvgY(0);
+  const extX1 = left-26, extX2 = right+26;
+  svgH += `<line x1="${extX1}" y1="${cutY}" x2="${extX2}" y2="${cutY}" stroke="#111" stroke-width="1.6" stroke-dasharray="10,3,2,3"/>`;
+  svgH += `<line x1="${extX1}" y1="${cutY}" x2="${extX1+14}" y2="${cutY-9}" stroke="#111" stroke-width="1.6" marker-end="url(#cutArrow)"/>`;
+  svgH += `<line x1="${extX2}" y1="${cutY}" x2="${extX2-14}" y2="${cutY-9}" stroke="#111" stroke-width="1.6" marker-end="url(#cutArrow)"/>`;
+  svgH += `<text x="${extX1-4}" y="${cutY+4}" font-size="13" font-weight="800" fill="#111" text-anchor="end">X</text>`;
+  svgH += `<text x="${extX2+4}" y="${cutY+4}" font-size="13" font-weight="800" fill="#111">X</text>`;
+  const cutX = toSvgX(0);
+  const extY1 = top-26, extY2 = bot+26;
+  svgH += `<line x1="${cutX}" y1="${extY1}" x2="${cutX}" y2="${extY2}" stroke="#111" stroke-width="1.6" stroke-dasharray="10,3,2,3"/>`;
+  svgH += `<line x1="${cutX}" y1="${extY1}" x2="${cutX+9}" y2="${extY1+14}" stroke="#111" stroke-width="1.6" marker-end="url(#cutArrow)"/>`;
+  svgH += `<line x1="${cutX}" y1="${extY2}" x2="${cutX+9}" y2="${extY2-14}" stroke="#111" stroke-width="1.6" marker-end="url(#cutArrow)"/>`;
+  svgH += `<text x="${cutX}" y="${extY1-6}" font-size="13" font-weight="800" fill="#111" text-anchor="middle">Y</text>`;
+  svgH += `<text x="${cutX}" y="${extY2+16}" font-size="13" font-weight="800" fill="#111" text-anchor="middle">Y</text>`;
+
+  // ---- bolts (color-coded, drop-shadow for dimension) ----
+  res.geom.bolts.forEach(b=>{
+    const sx = toSvgX(b.x), sy = toSvgY(b.y);
+    svgH += `<circle cx="${sx}" cy="${sy}" r="9" fill="${acol.main}" stroke="#0B2545" stroke-width="1.5" filter="url(#softShadow)"/>`;
+    svgH += `<circle cx="${sx}" cy="${sy}" r="3.2" fill="#fff" opacity="0.9"/>`;
+    if(labelMode==='coord'){
+      svgH += `<text x="${sx}" y="${sy-14}" font-size="10" fill="#0B2545" text-anchor="middle">#${b.id} (${b.x},${b.y})</text>`;
+    } else {
+      svgH += `<text x="${sx}" y="${sy-14}" font-size="10" fill="#0B2545" text-anchor="middle">#${b.id}</text>`;
+    }
+  });
+
+  if(labelMode==='dim'){
+    const xs = [...new Set(res.geom.bolts.map(b=>b.x.toFixed(2)))].map(Number).sort((a,b)=>a-b);
+    const ys = [...new Set(res.geom.bolts.map(b=>b.y.toFixed(2)))].map(Number).sort((a,b)=>a-b);
+    const spacingY = top - 12;
+    for(let i=0;i<xs.length-1;i++){ svgH += dimH(toSvgX(xs[i]), toSvgX(xs[i+1]), spacingY, (xs[i+1]-xs[i]).toFixed(1)); }
+    const spacingX = right + 14;
+    for(let i=0;i<ys.length-1;i++){ svgH += dimV(spacingX, toSvgY(ys[i+1]), toSvgY(ys[i]), (ys[i+1]-ys[i]).toFixed(1), 'right'); }
+  }
+
+  // ---- Vua arrow + Nua indicator (symbols only) ----
+  const bcx = res.geom.bolts.reduce((s,b)=>s+b.x,0)/res.geom.bolts.length;
+  const bcy = res.geom.bolts.reduce((s,b)=>s+b.y,0)/res.geom.bolts.length;
+  const arrowLenCm = Math.max(panelW,panelH)*0.22;
+  let dx=0, dy=0, dirLabel='';
+  if(shearDir==='down'){ dy=-1; dirLabel='ลงล่าง'; }
+  else if(shearDir==='up'){ dy=1; dirLabel='ขึ้นบน'; }
+  else if(shearDir==='left'){ dx=-1; dirLabel='ไปทางซ้าย'; }
+  else { dx=1; dirLabel='ไปทางขวา'; }
+  const sx1=toSvgX(bcx), sy1=toSvgY(bcy), sx2=toSvgX(bcx+dx*arrowLenCm), sy2=toSvgY(bcy+dy*arrowLenCm);
+  svgH += `<line x1="${sx1}" y1="${sy1}" x2="${sx2}" y2="${sy2}" stroke="#1F6FEB" stroke-width="4" marker-end="url(#arrowhead)" filter="url(#softShadow)"/>`;
+  svgH += `<circle cx="${sx1}" cy="${sy1}" r="12" fill="none" stroke="#C0392B" stroke-width="2"/>`;
+  svgH += `<circle cx="${sx1}" cy="${sy1}" r="2.5" fill="#C0392B"/>`;
+
+  // ---- compact force legend (bottom-left of drawing — Nua/Vua values only, no verdict/DCR here) ----
+  const legY = 500;
+  svgH += `<rect x="16" y="${legY-32}" width="260" height="62" fill="#fff" stroke="#d8dee9" stroke-width="1" rx="7" filter="url(#cardShadow)"/>`;
+  svgH += `<circle cx="32" cy="${legY-18}" r="6" fill="${acol.main}" stroke="#0B2545" stroke-width="1.3"/>`;
+  svgH += `<text x="44" y="${legY-14}" font-size="10.5" font-weight="700" fill="${acol.main}">${acol.label}</text>`;
+  svgH += `<circle cx="32" cy="${legY-2}" r="6" fill="none" stroke="#C0392B" stroke-width="2"/><circle cx="32" cy="${legY-2}" r="1.8" fill="#C0392B"/>`;
+  svgH += `<text x="44" y="${legY+2}" font-size="11" font-weight="700" fill="#C0392B">N_ua = ${fmt(Nua)} kg (ตั้งฉากหน้า)</text>`;
+  svgH += `<line x1="26" y1="${legY+16}" x2="38" y2="${legY+16}" stroke="#1F6FEB" stroke-width="3" marker-end="url(#arrowhead)"/>`;
+  svgH += `<text x="44" y="${legY+20}" font-size="11" font-weight="700" fill="#1F6FEB">V_ua = ${fmt(Vua)} kg (${dirLabel})</text>`;
+
+  if(showDims){
+    svgH += dimH(left, toSvgX(-panelW/2+res.geom.ca1L), top-28, `ca1L=${res.geom.ca1L.toFixed(1)}`);
+    svgH += dimH(toSvgX(panelW/2-res.geom.ca1R), right, top-28, `ca1R=${res.geom.ca1R.toFixed(1)}`);
+    svgH += dimV(right+28, top, toSvgY(panelH/2-res.geom.ca2T), `ca2T=${res.geom.ca2T.toFixed(1)}`,'right');
+    svgH += dimV(right+28, toSvgY(-panelH/2+res.geom.ca2B), bot, `ca2B=${res.geom.ca2B.toFixed(1)}`,'right');
+  }
+
+  svg.setAttribute('viewBox','0 0 640 545');
+  svg.innerHTML = svgH;
+  document.getElementById('geomSummary').innerHTML =
+    `n=${res.inputs.n} ดอก | ca1,left=${res.geom.ca1L.toFixed(1)} | ca1,right=${res.geom.ca1R.toFixed(1)} | ca2,top=${res.geom.ca2T.toFixed(1)} | ca2,bottom=${res.geom.ca2B.toFixed(1)} | extent_x=${res.geom.extentX.toFixed(1)} | extent_y=${res.geom.extentY.toFixed(1)} | เส้นประดำ = สัญลักษณ์ทิศทางรูปตัด X-X / Y-Y`;
+}
+
+/* ---- SECTION VIEW (X-X or Y-Y) ---- */
+function renderSectionView(res, axis){
+  const svg = document.getElementById('diagram');
+  const {hef,ha,Nua,Vua,shearDir} = res.inputs;
+  const span = axis==='X' ? res.inputs.panelW : res.inputs.panelH;
+  const caNear = axis==='X' ? res.geom.ca1L : res.geom.ca2B;
+  const caFar  = axis==='X' ? res.geom.ca1R : res.geom.ca2T;
+  const bolts = res.geom.bolts;
+  const coordKey = axis==='X' ? 'x' : 'y';
+  // does the current Vua direction act IN this section's cutting plane?
+  const vuaInThisSection = axis==='X' ? (shearDir==='left'||shearDir==='right') : (shearDir==='down'||shearDir==='up');
+
+  const pad = 70;
+  const availW = 620-2*pad, availH = 400-2*pad;
+  const scale = Math.min(availW/span, availH/Math.max(ha,hef*1.3));
+  const cx = 310;
+  const surfY = 100; // depth=0 (installation surface) drawn near top
+  const toSvgPos = v => cx + v*scale;
+  const toSvgDepth = d => surfY + d*scale;
+
+  const left = toSvgPos(-span/2), right = toSvgPos(span/2);
+  const botY = toSvgDepth(ha);
+
+  let svgH = svgDefs();
+  // ---- cut-reference header, linking back to the Plan View symbol ----
+  svgH += `<text x="${cx}" y="28" font-size="14" font-weight="800" fill="#111" text-anchor="middle">${axis} ◄╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌► ${axis}</text>`;
+  svgH += `<text x="${cx}" y="46" font-size="10.5" fill="#5a6472" text-anchor="middle">สอดคล้องกับสัญลักษณ์เส้นตัด ${axis}-${axis} ในผังบน (Plan View)</text>`;
+
+  // concrete member (profile)
+  svgH += `<rect x="${left}" y="${surfY}" width="${right-left}" height="${botY-surfY}" fill="#eef3fa" stroke="#0B2545" stroke-width="2"/>`;
+  svgH += `<line x1="${left-10}" y1="${surfY}" x2="${right+10}" y2="${surfY}" stroke="#0B2545" stroke-width="2.5"/>`;
+  svgH += `<text x="${left-10}" y="${surfY-8}" font-size="10.5" fill="#0B2545">ผิวคอนกรีต / ผิวติดตั้ง (Installation Surface)</text>`;
+
+  // hatch pattern for concrete (visual polish)
+  svgH += `<clipPath id="clipConc"><rect x="${left}" y="${surfY}" width="${right-left}" height="${botY-surfY}"/></clipPath>`;
+  let hatch='';
+  for(let hx=left-100; hx<right+100; hx+=10){
+    hatch += `<line x1="${hx}" y1="${surfY}" x2="${hx+100}" y2="${botY+100}" stroke="#dbe4f0" stroke-width="1"/>`;
+  }
+  svgH += `<g clip-path="url(#clipConc)">${hatch}</g>`;
+  svgH += `<rect x="${left}" y="${surfY}" width="${right-left}" height="${botY-surfY}" fill="none" stroke="#0B2545" stroke-width="2"/>`;
+
+  // anchors projected onto this section (color-coded by anchor material type)
+  const acol = anchorColor(res.inputs.atype);
+  const seen = new Set();
+  bolts.forEach(b=>{
+    const pos = b[coordKey];
+    const key = pos.toFixed(2);
+    if(seen.has(key)) return;
+    seen.add(key);
+    const sx = toSvgPos(pos);
+    const rodTop = surfY, rodBot = toSvgDepth(hef);
+    svgH += `<rect x="${sx-4}" y="${rodTop}" width="8" height="${rodBot-rodTop}" fill="${acol.light}" stroke="${acol.main}" stroke-width="1.5"/>`;
+    svgH += `<polygon points="${sx-7},${rodBot} ${sx+7},${rodBot} ${sx},${rodBot+9}" fill="${acol.light}" stroke="${acol.main}" stroke-width="1.5"/>`;
+    if(labelMode==='coord'){
+      svgH += `<text x="${sx}" y="${rodBot+22}" font-size="9.5" fill="#0B2545" text-anchor="middle">${axis}=${pos.toFixed(1)}</text>`;
+    }
+  });
+
+  // edge distance markers (dashed verticals at true edges)
+  svgH += `<line x1="${left}" y1="${surfY-20}" x2="${left}" y2="${botY+15}" stroke="#1a7f37" stroke-width="1" stroke-dasharray="3,3"/>`;
+  svgH += `<line x1="${right}" y1="${surfY-20}" x2="${right}" y2="${botY+15}" stroke="#1a7f37" stroke-width="1" stroke-dasharray="3,3"/>`;
+
+  if(showDims){
+    const anchorX = toSvgPos(bolts[0][coordKey]);
+    svgH += dimV(anchorX+22, surfY, toSvgDepth(hef), `hef=${hef.toFixed(1)}`, 'right');
+    svgH += dimV(right+50, surfY, botY, `ha=${ha.toFixed(1)}`, 'right');
+    if(labelMode==='dim'){
+      const nearBoltX = Math.min(...bolts.map(b=>b[coordKey]));
+      const farBoltX = Math.max(...bolts.map(b=>b[coordKey]));
+      svgH += dimH(left, toSvgPos(nearBoltX), surfY-58, `${axis==='X'?'ca1,left':'ca2,bottom'}=${caNear.toFixed(1)}`);
+      svgH += dimH(toSvgPos(farBoltX), right, surfY-58, `${axis==='X'?'ca1,right':'ca2,top'}=${caFar.toFixed(1)}`);
+    }
+  }
+
+  // ---- force value + material-type legend box (fixed position, avoids all overlap) ----
+  const legX = left, legY = botY + 55;
+  const vuaText = vuaInThisSection ? `V_ua = ${fmt(Vua)} kg (ในระนาบรูปตัดนี้)` : `V_ua = ${fmt(Vua)} kg (ตั้งฉากรูปตัดนี้ — ดูรูปตัด ${axis==='X'?'Y-Y':'X-X'})`;
+  svgH += `<rect x="${legX}" y="${legY}" width="290" height="62" fill="#fff" stroke="#d8dee9" stroke-width="1" rx="6"/>`;
+  svgH += `<circle cx="${legX+16}" cy="${legY+14}" r="6" fill="${acol.main}" stroke="#0B2545" stroke-width="1.3"/>`;
+  svgH += `<text x="${legX+28}" y="${legY+18}" font-size="10.5" font-weight="700" fill="${acol.main}">${acol.label}</text>`;
+  svgH += `<line x1="${legX+10}" y1="${legY+30}" x2="${legX+22}" y2="${legY+30}" stroke="#C0392B" stroke-width="3" marker-end="url(#arrowheadRed)"/>`;
+  svgH += `<text x="${legX+28}" y="${legY+34}" font-size="10.5" font-weight="700" fill="#C0392B">N_ua = ${fmt(Nua)} kg (ตั้งฉากหน้า)</text>`;
+  svgH += `<line x1="${legX+10}" y1="${legY+46}" x2="${legX+22}" y2="${legY+46}" stroke="${vuaInThisSection?'#1F6FEB':'#9aa4b2'}" stroke-width="3" marker-end="url(${vuaInThisSection?'#arrowhead':'#arrowheadGray'})"/>`;
+  svgH += `<text x="${legX+28}" y="${legY+50}" font-size="10" font-weight="700" fill="${vuaInThisSection?'#1F6FEB':'#9aa4b2'}">${vuaText}</text>`;
+
+  svgH += `<text x="${(left+right)/2}" y="${botY+38}" font-size="12.5" font-weight="700" fill="#0B2545" text-anchor="middle">รูปตัด ${axis}-${axis} (Section ${axis}-${axis})</text>`;
+
+  svg.setAttribute('viewBox','0 0 620 545');
+  svg.innerHTML = svgH;
+  document.getElementById('geomSummary').innerHTML =
+    `รูปตัด ${axis}-${axis} | hef=${hef.toFixed(1)} cm | ha=${ha.toFixed(1)} cm | ระยะขอบใกล้=${caNear.toFixed(1)} cm | ระยะขอบไกล=${caFar.toFixed(1)} cm | Nua=${fmt(Nua)} kg${vuaInThisSection?` | Vua=${fmt(Vua)} kg`:''}`;
+}
+
+/* ---- AUTO SUMMARY PANEL ---- */
+function renderSummaryPanel(res){
+  const el = document.getElementById('summaryGrid');
+  const items = [
+    ['n', res.inputs.n+' ดอก'],
+    ['hef', res.inputs.hef.toFixed(1)+' cm'],
+    ['ha', res.inputs.ha.toFixed(1)+' cm'],
+    ["ca1,left", res.geom.ca1L.toFixed(1)+' cm'],
+    ["ca1,right", res.geom.ca1R.toFixed(1)+' cm'],
+    ["ca2,top", res.geom.ca2T.toFixed(1)+' cm'],
+    ["ca2,bottom", res.geom.ca2B.toFixed(1)+' cm'],
+    ["extent_x", res.geom.extentX.toFixed(1)+' cm'],
+    ["extent_y", res.geom.extentY.toFixed(1)+' cm'],
+    ["φNn", fmt(res.phiNn)+' kg'],
+    ["φVn", fmt(res.phiVn)+' kg'],
+    ["DCR รวม", res.ratioSum.toFixed(3)],
+  ];
+  el.innerHTML = items.map(([lbl,val])=>`<div class="summary-item"><div class="val">${val}</div><div class="lbl">${lbl}</div></div>`).join('');
+}
+
+/* ============================================================
+   RENDER: verdict + summary bars
+   ============================================================ */
+function renderVerdict(res){
+  const banner = document.getElementById('verdictBanner');
+  if(!res){ banner.className='verdict-banner'; banner.textContent='กรุณาป้อนข้อมูลให้ครบถ้วน'; return; }
+  banner.className = 'verdict-banner ' + (res.ok?'verdict-ok':'verdict-ng');
+  banner.textContent = res.ok ? '✓ ผ่านเกณฑ์ (OK)' : '✗ ไม่ผ่านเกณฑ์ (NG) — ต้องปรับปรุงการออกแบบ';
+  $('phiNnOut').textContent = fmt(res.phiNn)+' kg';
+  $('phiVnOut').textContent = fmt(res.phiVn)+' kg';
+  $('ratioNOut').innerHTML = `<span class="${res.ratioN<=1?'pass':'fail'}">${fmt3(res.ratioN)}</span>`;
+  $('ratioVOut').innerHTML = `<span class="${res.ratioV<=1?'pass':'fail'}">${fmt3(res.ratioV)}</span>`;
+  $('ratioSumOut').innerHTML = `<span class="${res.ratioSum<=1.2?'pass':'fail'}">${fmt3(res.ratioSum)}</span>`;
+}
+
+function renderBars(res){
+  const el = document.getElementById('modeBars');
+  if(!res){ el.innerHTML=''; return; }
+  const allModes = [...res.tensionModes, ...res.shearModes];
+  const maxVal = Math.max(...allModes.filter(m=>m.val).map(m=>m.val), 1);
+  el.innerHTML = allModes.map(m=>{
+    const isNA = m.na || m.val===null || isNaN(m.val);
+    const isGovernN = !isNA && res.tensionModes.includes(m) && m.val===res.phiNn;
+    const isGovernV = !isNA && res.shearModes.includes(m) && m.val===res.phiVn;
+    const govern = isGovernN||isGovernV;
+    const pct = isNA?0:Math.max(3,(m.val/maxVal*100));
+    return `<div class="mode-row ${isNA?'na':''} ${govern?'govern':''}">
+      <span>${m.label} <span style="color:#9aa4b2;font-size:10.5px;">(${m.ref})</span></span>
+      <span>${isNA?'<span class="na">N/A</span>':fmt(m.val)+' kg'}</span>
+      <div class="bar-wrap"><div class="bar" style="width:${pct}%"></div></div>
+      <span>${govern?'<span class="badge" style="background:'+(m.val<=(res.tensionModes.includes(m)?res.phiNn+0.01:res.phiVn+0.01)?'#c0392b':'#1a7f37')+'">GOVERN</span>':''}</span>
+    </div>`;
+  }).join('');
+}
+
+/* ============================================================
+   RENDER: detailed calculation steps
+   ============================================================ */
+function renderDetails(res){
+  const el = document.getElementById('detailSteps');
+  if(!res){ el.innerHTML='<p>กรุณาป้อนข้อมูลให้ครบถ้วน</p>'; return; }
+  const s = res.steps, g = res.geom, inp = res.inputs;
+  const typeBadge = inp.atype==='Adhesive'?'<span class="badge badge-adhesive">Adhesive</span>':inp.atype==='Castin'?'<span class="badge badge-castin">Cast-in</span>':'<span class="badge badge-mech">Mechanical</span>';
+  const condTH = inp.cond==='cracked' ? 'คอนกรีตแตกร้าว (Cracked)' : (inp.cond==='uncr_dry' ? 'คอนกรีตไม่แตกร้าว รูแห้ง (Uncracked-Dry)' : 'คอนกรีตไม่แตกร้าว รูเปียก (Uncracked-Wet)');
+
+  // helper: variable-definition table
+  const vt = (rows) => `<table style="margin:6px 0 10px;font-size:11.8px;"><tr><th style="width:70px;">สัญลักษณ์</th><th>ความหมาย</th><th style="width:90px;">ค่า</th></tr>${
+    rows.map(r=>`<tr><td><b>${r[0]}</b></td><td style="text-align:left;">${r[1]}</td><td>${r[2]}</td></tr>`).join('')
+  }</table>`;
+  const cond = (text) => `<div class="line" style="background:#eef3fa;border-left:3px solid var(--navy2);padding:5px 9px;margin:6px 0;border-radius:0 5px 5px 0;"><b>เงื่อนไข:</b> ${text}</div>`;
+
+  el.innerHTML = `
+
+  <details open><summary>0. เรขาคณิตที่คำนวณจากพิกัด (Derived Geometry) — จุดกำเนิด (0,0) ที่ศูนย์กลางแผ่น ${typeBadge}</summary>
+    <div class="step">
+      <p>ระบบพิกัดใช้จุดศูนย์กลางแผ่นคอนกรีตเป็นจุดกำเนิด (0,0) พิกัด (X,Y) ของแต่ละ Anchor ที่ป้อนจึงสามารถเป็นค่าบวกหรือลบได้ ขึ้นอยู่กับตำแหน่งเทียบกับศูนย์กลาง</p>
+      ${vt([
+        ['n','จำนวน Anchor ที่ใช้งานจริง (นับจากพิกัดที่ป้อน)',`${inp.n} ดอก`],
+        ['x<sub>min</sub>, x<sub>max</sub>','พิกัด X ต่ำสุด/สูงสุดของกลุ่ม Anchor',`${g.xmin.toFixed(2)}, ${g.xmax.toFixed(2)} cm`],
+        ['y<sub>min</sub>, y<sub>max</sub>','พิกัด Y ต่ำสุด/สูงสุดของกลุ่ม Anchor',`${g.ymin.toFixed(2)}, ${g.ymax.toFixed(2)} cm`],
+        ['Panel W, H','ความกว้าง/สูงแผ่นคอนกรีตที่ป้อน',`${inp.panelW}, ${inp.panelH} cm`],
+      ])}
+      <div class="formula">c<sub>a1,left</sub> = Panel W/2 + x<sub>min</sub> = ${inp.panelW}/2 + (${g.xmin.toFixed(2)}) = <b>${g.ca1L.toFixed(2)} cm</b></div>
+      <div class="formula">c<sub>a1,right</sub> = Panel W/2 − x<sub>max</sub> = ${inp.panelW}/2 − ${g.xmax.toFixed(2)} = <b>${g.ca1R.toFixed(2)} cm</b></div>
+      <div class="formula">c<sub>a2,bottom</sub> = Panel H/2 + y<sub>min</sub> = ${inp.panelH}/2 + (${g.ymin.toFixed(2)}) = <b>${g.ca2B.toFixed(2)} cm</b></div>
+      <div class="formula">c<sub>a2,top</sub> = Panel H/2 − y<sub>max</sub> = ${inp.panelH}/2 − ${g.ymax.toFixed(2)} = <b>${g.ca2T.toFixed(2)} cm</b></div>
+      <div class="line">extent_x = x<sub>max</sub>−x<sub>min</sub> = <b>${g.extentX.toFixed(2)} cm</b> (ระยะห่างรวมทิศ X, เทียบเท่า s1) &nbsp;|&nbsp; extent_y = y<sub>max</sub>−y<sub>min</sub> = <b>${g.extentY.toFixed(2)} cm</b> (เทียบเท่า s2)</div>
+    </div>
+  </details>
+
+  <details><summary>4. กำลังเหล็ก Anchor (Steel Strength) — ACI 17.6.1 &amp; 17.7.1</summary>
+    <div class="step">
+      <p>โหมดนี้พิจารณากำลังของหน้าตัดเหล็ก Anchor เอง เป็นโหมดที่ใช้ได้กับ Anchor ทุกชนิด (Cast-in / Adhesive / Mechanical) โดยไม่ขึ้นกับสภาพคอนกรีตหรือระยะขอบ</p>
+      ${vt([
+        ['A<sub>se,N</sub>','พื้นที่หน้าตัดประสิทธิผลรับแรงดึง (จากตาราง 1, ขนาด '+inp.sizeKey+')',`${inp.Ase} cm²`],
+        ['f<sub>uta</sub>','กำลังดึงประลัยของเหล็ก Anchor (เกรดที่เลือก)',`${inp.futa} ksc`],
+        ['f<sub>ya</sub>','กำลังจุดครากของเหล็ก Anchor',`${inp.fya} ksc`],
+      ])}
+      ${cond(`ตรวจสอบขีดจำกัด f<sub>uta</sub> ≤ MIN(1.9f<sub>ya</sub>, 8780) = MIN(${(1.9*inp.fya).toFixed(0)}, 8780) = ${Math.min(1.9*inp.fya,8780).toFixed(0)} ksc → f<sub>uta</sub>=${inp.futa} <b class="${s.steel.futaCheck?'pass':'fail'}">${s.steel.futaCheck?'ผ่าน (OK)':'ไม่ผ่าน (NG)'}</b>`)}
+      <div class="formula">N<sub>sa</sub> = A<sub>se,N</sub> × f<sub>uta</sub> = ${inp.Ase} × ${inp.futa} = ${fmt(s.steel.Nsa)} kg &nbsp;<span class="note" style="color:#888">(ต่อ Anchor 1 ดอก, ACI Eq.17.6.1.2)</span></div>
+      <div class="result">φN<sub>sa</sub> (1 ดอก) = φ×N<sub>sa</sub> = 0.65×${fmt(s.steel.Nsa)} = ${fmt(s.steel.phiNsa1)} kg<br>φN<sub>sa</sub> (กลุ่ม ${inp.n} ดอก, ไม่มี Group Effect สำหรับ Steel) = ${fmt(s.steel.phiNsa1)}×${inp.n} = <b>${fmt(s.steel.phiNsaGrp)} kg</b></div>
+      <div class="formula">V<sub>sa</sub> = 0.6 × A<sub>se,V</sub> × f<sub>uta</sub> = 0.6×${inp.Ase}×${inp.futa} = ${fmt(s.steel.Vsa)} kg &nbsp;<span class="note" style="color:#888">(ตัวคูณ 0.6 จากทฤษฎี Von Mises: τ<sub>y</sub>≈0.577f<sub>y</sub>)</span></div>
+      <div class="result">φV<sub>sa</sub> (1 ดอก) = 0.60×${fmt(s.steel.Vsa)} = ${fmt(s.steel.phiVsa1)} kg → φV<sub>sa</sub> (กลุ่ม) = <b>${fmt(s.steel.phiVsaGrp)} kg</b></div>
+    </div>
+  </details>
+
+  <details><summary>5A. กำลังยึดเหนี่ยว Bond Strength — ACI 17.6.5 ${s.bond.applicable?'':'<span class="na">(N/A — ไม่ใช่ Adhesive)</span>'}</summary>
+    <div class="step">
+      ${s.bond.applicable ? `
+      <p>โหมดนี้ใช้เฉพาะ Adhesive Anchor โดยแรงดึงถ่ายผ่านชั้นกาวที่กระจายสม่ำเสมอตลอดความลึกฝังยึด h<sub>ef</sub></p>
+      ${vt([
+        ['τ','หน่วยแรงยึดเหนี่ยว (สภาพ: '+condTH+')',`${inp.tau} ksc`],
+        ['d<sub>a</sub>','เส้นผ่านศูนย์กลาง Anchor',`${inp.da} cm`],
+        ['h<sub>ef</sub>','ความลึกฝังยึด',`${inp.hef} cm`],
+        ["e'<sub>N</sub>",'ความเยื้องศูนย์แรงดึง',`${inp.eN} cm`],
+      ])}
+      <div class="formula">N<sub>ba</sub> = τ×π×d<sub>a</sub>×h<sub>ef</sub> = ${inp.tau}×π×${inp.da}×${inp.hef} = <b>${fmt(s.bond.Nba)} kg</b> (ต่อดอก, ACI Eq.17.6.5.2.1)</div>
+      <div class="formula">c<sub>Na</sub> = 10×d<sub>a</sub>×√(τ/77.34) = 10×${inp.da}×√(${inp.tau}/77.34) = <b>${s.bond.cNa.toFixed(2)} cm</b></div>
+      <div class="line">A<sub>Nao</sub> = (2c<sub>Na</sub>)² = (2×${s.bond.cNa.toFixed(2)})² = <b>${fmt(s.bond.ANao)} cm²</b> (พื้นที่ฉาย Anchor เดี่ยวไม่จำกัดขอบ)</div>
+      <div class="line">A<sub>Na</sub> = จากระยะขอบจริงเทียบกับ c<sub>Na</sub> ทั้ง 4 ด้าน = <b>${fmt(s.bond.ANa)} cm²</b> (พื้นที่ฉายจริงของกลุ่ม)</div>
+      ${cond(`ψ<sub>ec,Na</sub> = 1/(1+e'<sub>N</sub>/c<sub>Na</sub>) = 1/(1+${inp.eN}/${s.bond.cNa.toFixed(2)}) = <b>${s.bond.psiecNa.toFixed(3)}</b> (≤1 เสมอ)`)}
+      ${cond(`ψ<sub>ed,Na</sub> = 0.7+0.3×(c<sub>a,min</sub>/c<sub>Na</sub>) = 0.7+0.3×(${g.caMin.toFixed(2)}/${s.bond.cNa.toFixed(2)}) = <b>${s.bond.psiedNa.toFixed(3)}</b>`)}
+      <div class="formula">N<sub>ag</sub> = (A<sub>Na</sub>/A<sub>Nao</sub>)×ψ<sub>ec,Na</sub>×ψ<sub>ed,Na</sub>×N<sub>ba</sub><br>
+      &nbsp;&nbsp;&nbsp;= (${fmt(s.bond.ANa)}/${fmt(s.bond.ANao)})×${s.bond.psiecNa.toFixed(3)}×${s.bond.psiedNa.toFixed(3)}×${fmt(s.bond.Nba)} = <b>${fmt(s.bond.Nag)} kg</b> (nominal, กลุ่ม)</div>
+      <div class="result">φN<sub>ag</sub> = φ(Category 1)×N<sub>ag</sub> = 0.65×${fmt(s.bond.Nag)} = <b>${fmt(s.bond.phiNag)} kg</b></div>
+      ` : `<div class="warn">N/A — ชนิด Anchor ที่เลือกไม่ใช่ Adhesive จึงไม่ใช้กลไก Bond (ใช้ Pullout ในหัวข้อ 5B แทน)</div>`}
+    </div>
+  </details>
+
+  <details><summary>5B. กำลังถอนตัว Pullout Strength — ACI 17.6.3 ${s.pullout.applicable?'':'<span class="na">(N/A — เป็น Adhesive)</span>'}</summary>
+    <div class="step">
+      ${s.pullout.applicable ? `
+      <p>โหมดนี้ใช้กับ Cast-in Headed Anchor และ Mechanical Anchor พิจารณาแรงแบริ่งใต้หัว Anchor (Cast-in) หรือกลไกยึดเชิงกล (Mechanical, อ้างอิงข้อมูล ESR)</p>
+      ${cond(`ψ<sub>c,P</sub> = ${s.pullout.psicP.toFixed(2)} เนื่องจากสภาพคอนกรีตเป็น <b>${condTH}</b> (1.0 หากแตกร้าว, 1.4 หากไม่แตกร้าว)`)}
+      ${inp.atype==='Castin' ? `
+      ${vt([
+        ['A<sub>brg</sub>','พื้นที่แบริ่งหัว Anchor (จากตาราง 1)',`${inp.Abrg} cm²`],
+        ["f'c",'กำลังอัดคอนกรีต',`${inp.fc} ksc`],
+      ])}
+      <div class="formula">N<sub>p</sub> = 8×A<sub>brg</sub>×f'c = 8×${inp.Abrg}×${inp.fc} = <b>${fmt(s.pullout.Np_castin)} kg</b> (ต่อดอก, Cast-in)</div>
+      ` : `
+      <div class="line">N<sub>p</sub> (Mechanical, จากตาราง ESR ผลิตภัณฑ์) = <b>${fmt(s.pullout.Np_mech)} kg</b> (ต่อดอก)</div>
+      `}
+      <div class="formula">N<sub>pn</sub> = ψ<sub>c,P</sub> × N<sub>p</sub> = ${s.pullout.psicP.toFixed(2)}×${fmt(s.pullout.Np_used)} = <b>${fmt(s.pullout.Npn)} kg</b> (ต่อดอก)</div>
+      <div class="result">φN<sub>pn</sub> (กลุ่ม ${inp.n} ดอก, ไม่มี Group Reduction) = φ×N<sub>pn</sub>×n = 0.70×${fmt(s.pullout.Npn)}×${inp.n} = <b>${fmt(s.pullout.phiNpn)} kg</b></div>
+      ` : `<div class="warn">N/A — สำหรับ Adhesive Anchor กลไกนี้ถูกครอบคลุมโดย Bond Strength (หัวข้อ 5A) แล้ว ไม่ต้องตรวจสอบซ้ำ</div>`}
+    </div>
+  </details>
+
+  <details><summary>6. กำลังกรวยคอนกรีตรับแรงดึง Concrete Breakout-Tension — ACI 17.6.2</summary>
+    <div class="step">
+      <p>โหมดนี้ใช้ได้กับ Anchor ทุกชนิด พิจารณากรวยวิบัติคอนกรีตที่ก่อตัวรอบ Anchor เมื่อรับแรงดึง ตามวิธี Concrete Capacity Design (CCD)</p>
+      ${vt([
+        ['h<sub>ef</sub>','ความลึกฝังยึด',`${inp.hef} cm`],
+        ["f'c",'กำลังอัดคอนกรีต',`${inp.fc} ksc`],
+        ['k<sub>c</sub>','ตัวคูณ Breakout พื้นฐาน',`${s.breakoutT.kc} ${inp.atype==='Castin'?'(Cast-in)':'(Post-installed)'}`],
+        ["e'<sub>N</sub>",'ความเยื้องศูนย์แรงดึง',`${inp.eN} cm`],
+      ])}
+      <div class="line">A<sub>Nco</sub> = 9h<sub>ef</sub>² = 9×${inp.hef}² = <b>${fmt(s.breakoutT.ANco)} cm²</b> &nbsp;|&nbsp; 1.5h<sub>ef</sub> = <b>${s.breakoutT.lim15N.toFixed(2)} cm</b></div>
+      <div class="line">A<sub>Nc</sub> = จากระยะขอบจริงเทียบกับ 1.5h<sub>ef</sub> ทั้ง 4 ด้าน = <b>${fmt(s.breakoutT.ANc)} cm²</b> (อัตราส่วน A<sub>Nc</sub>/A<sub>Nco</sub> = ${(s.breakoutT.ANc/s.breakoutT.ANco).toFixed(3)})</div>
+      ${cond(`ψ<sub>ec,N</sub> = 1/(1+e'<sub>N</sub>/1.5h<sub>ef</sub>) = 1/(1+${inp.eN}/${s.breakoutT.lim15N.toFixed(2)}) = <b>${s.breakoutT.psiecN.toFixed(3)}</b>`)}
+      ${cond(`ψ<sub>ed,N</sub> = 0.7+0.3×(c<sub>a,min</sub>/1.5h<sub>ef</sub>) = 0.7+0.3×(${g.caMin.toFixed(2)}/${s.breakoutT.lim15N.toFixed(2)}) = <b>${s.breakoutT.psiedN.toFixed(3)}</b> (c<sub>a,min</sub> = ระยะขอบน้อยสุดใน 4 ทิศ = ${g.caMin.toFixed(2)} cm)`)}
+      <div class="formula">N<sub>b</sub> = k<sub>c</sub>×√(f'c×14.223)×(h<sub>ef</sub>/2.54)<sup>1.5</sup>×0.453592<br>
+      &nbsp;&nbsp;&nbsp;= ${s.breakoutT.kc}×√(${inp.fc}×14.223)×(${inp.hef}/2.54)<sup>1.5</sup>×0.453592 = <b>${fmt(s.breakoutT.Nb)} kg</b></div>
+      <div class="formula">N<sub>cbg</sub> = (A<sub>Nc</sub>/A<sub>Nco</sub>)×ψ<sub>ec,N</sub>×ψ<sub>ed,N</sub>×N<sub>b</sub><br>
+      &nbsp;&nbsp;&nbsp;= (${fmt(s.breakoutT.ANc)}/${fmt(s.breakoutT.ANco)})×${s.breakoutT.psiecN.toFixed(3)}×${s.breakoutT.psiedN.toFixed(3)}×${fmt(s.breakoutT.Nb)} = <b>${fmt(s.breakoutT.Ncbg)} kg</b> (nominal, กลุ่ม)</div>
+      <div class="result">φN<sub>cbg</sub> = 0.65×${fmt(s.breakoutT.Ncbg)} = <b>${fmt(s.breakoutT.phiNcbg)} kg</b></div>
+    </div>
+  </details>
+
+  <details><summary>7. กำลังต้านทานการระเบิดด้านข้าง Side-Face Blowout — ACI 17.6.4 ${s.blowout.blowApplicable?'':'<span class="na">(N/A)</span>'}</summary>
+    <div class="step">
+      <p>โหมดนี้ตรวจสอบเฉพาะเมื่อ Anchor ฝังลึกและอยู่ใกล้ขอบมาก (เฉพาะ Cast-in/Mechanical ที่มีหัวแบริ่ง)</p>
+      ${cond(`เกณฑ์ตรวจสอบ: c<sub>a1,min-side</sub> &lt; 0.4h<sub>ef</sub> และไม่ใช่ Adhesive → ${s.blowout.ca1MinSide.toFixed(2)} ${s.blowout.blowApplicable?'<':'≥'} ${s.blowout.lim04.toFixed(2)} cm → <b>${s.blowout.blowApplicable?'ต้องตรวจสอบ':'ไม่เข้าเกณฑ์ (N/A)'}</b>`)}
+      ${s.blowout.blowApplicable ? `
+      ${vt([
+        ['c<sub>a1,min-side</sub>','ระยะขอบใกล้สุดในทิศ ca1 (ซ้าย/ขวา)',`${s.blowout.ca1MinSide.toFixed(2)} cm`],
+        ['A<sub>brg</sub>','พื้นที่แบริ่งหัว Anchor',`${inp.Abrg} cm²`],
+      ])}
+      <div class="formula">N<sub>sb</sub> = 160×c<sub>a1,min-side</sub>×√A<sub>brg</sub>×√(f'c×14.223)×0.453592 = <b>${fmt(s.blowout.Nsb)} kg</b> (ต่อดอก)</div>
+      <div class="result">φN<sub>sbg</sub> (กลุ่ม) = 0.65×${fmt(s.blowout.Nsb)}×${inp.n} = <b>${fmt(s.blowout.phiNsbg)} kg</b></div>
+      ` : `<div class="warn">N/A — ไม่เข้าเกณฑ์ระยะขอบใกล้ หรือเป็น Adhesive Anchor (ไม่มีหัวแบริ่ง)</div>`}
+    </div>
+  </details>
+
+  <details><summary>8. กำลังกรวยคอนกรีตรับแรงเฉือน Concrete Breakout-Shear — ACI 17.7.2</summary>
+    <div class="step">
+      ${cond(`ทิศทางแรงเฉือนที่เลือก: <b>${s.breakoutV.shearDir}</b> → ระบบเลือกใช้ระยะขอบวิกฤต c<sub>a1,eff</sub> = ${s.breakoutV.ca1eff.toFixed(2)} cm ในทิศทางนี้โดยอัตโนมัติ`)}
+      ${vt([
+        ['c<sub>a1,eff</sub>','ระยะขอบในทิศทางแรงเฉือน (ตามที่เลือก)',`${s.breakoutV.ca1eff.toFixed(2)} cm`],
+        ['ขอบข้าง 1, 2','ระยะขอบตั้งฉากทิศทางแรง (ทั้งสองด้าน)',`${s.breakoutV.side1.toFixed(2)}, ${s.breakoutV.side2.toFixed(2)} cm`],
+        ['spacing','ระยะห่าง Anchor ขนานขอบที่รับแรง',`${s.breakoutV.parspace.toFixed(2)} cm`],
+        ["e'<sub>V</sub>",'ความเยื้องศูนย์แรงเฉือน',`${inp.eV} cm`],
+      ])}
+      <div class="line">ℓ<sub>e</sub> = MIN(h<sub>ef</sub>,8d<sub>a</sub>) = MIN(${inp.hef}, ${(8*inp.da).toFixed(1)}) = <b>${s.breakoutV.le.toFixed(2)} cm</b></div>
+      <div class="formula">V<sub>b,(a)</sub> = 7(ℓ<sub>e</sub>/d<sub>a</sub>)<sup>0.2</sup>√d<sub>a</sub>·√(f'c·14.223)·(c<sub>a1,eff</sub>/2.54)<sup>1.5</sup>×0.453592 = ${fmt(s.breakoutV.Vba)} kg</div>
+      <div class="formula">V<sub>b,(b)</sub> = 9√(f'c·14.223)·(c<sub>a1,eff</sub>/2.54)<sup>1.5</sup>×0.453592 = ${fmt(s.breakoutV.Vbb)} kg</div>
+      ${cond(`V<sub>b</sub> = MIN(V<sub>b,(a)</sub>, V<sub>b,(b)</sub>) = MIN(${fmt(s.breakoutV.Vba)}, ${fmt(s.breakoutV.Vbb)}) = <b>${fmt(s.breakoutV.Vb)} kg</b>`)}
+      <div class="line">A<sub>Vco</sub> = 4.5×c<sub>a1,eff</sub>² = 4.5×${s.breakoutV.ca1eff.toFixed(2)}² = <b>${fmt(s.breakoutV.AVco)} cm²</b> &nbsp;|&nbsp; A<sub>Vc</sub> = <b>${fmt(s.breakoutV.AVc)} cm²</b></div>
+      ${cond(`ψ<sub>ec,V</sub> = 1/(1+e'<sub>V</sub>/1.5c<sub>a1,eff</sub>) = 1/(1+${inp.eV}/${s.breakoutV.lim15V.toFixed(2)}) = <b>${s.breakoutV.psiecV.toFixed(3)}</b>`)}
+      <div class="line">ψ<sub>ed,V</sub> = <b>${s.breakoutV.psiedV.toFixed(3)}</b> &nbsp;|&nbsp; ψ<sub>h,V</sub> = <b>${s.breakoutV.psihV.toFixed(3)}</b> (h<sub>a</sub>=${inp.ha}cm ${inp.ha<s.breakoutV.lim15V?'< 1.5ca1,eff → ปรับเพิ่ม':'≥ 1.5ca1,eff → ไม่ปรับ'})</div>
+      <div class="formula">V<sub>cbg</sub> = (A<sub>Vc</sub>/A<sub>Vco</sub>)×ψ<sub>ec,V</sub>×ψ<sub>ed,V</sub>×ψ<sub>h,V</sub>×V<sub>b</sub><br>
+      &nbsp;&nbsp;&nbsp;= (${fmt(s.breakoutV.AVc)}/${fmt(s.breakoutV.AVco)})×${s.breakoutV.psiecV.toFixed(3)}×${s.breakoutV.psiedV.toFixed(3)}×${s.breakoutV.psihV.toFixed(3)}×${fmt(s.breakoutV.Vb)} = <b>${fmt(s.breakoutV.Vcbg)} kg</b></div>
+      <div class="result">φV<sub>cbg</sub> = 0.70×${fmt(s.breakoutV.Vcbg)} = <b>${fmt(s.breakoutV.phiVcbg)} kg</b></div>
+    </div>
+  </details>
+
+  <details><summary>9. กำลังง้างคอนกรีต Concrete Pryout — ACI 17.7.3</summary>
+    <div class="step">
+      <p>โหมดนี้เกิดกับ Anchor สั้นที่หมุนรอบจุดหมุนใกล้ผิวเมื่อรับแรงเฉือน ดันคอนกรีตด้านหลังให้หลุด ใช้กำลัง N<sub>cbg</sub> จากหัวข้อ 6 เป็นฐาน</p>
+      ${cond(`k<sub>cp</sub> = ${s.pryout.kcp} เนื่องจาก h<sub>ef</sub>=${inp.hef}cm ${inp.hef>=6.5?'≥':'<'} 6.5cm (2.0 หากลึก≥6.5cm, 1.0 หากตื้นกว่า)`)}
+      <div class="formula">V<sub>cpg</sub> = k<sub>cp</sub>×N<sub>cbg</sub> = ${s.pryout.kcp}×${fmt(s.breakoutT.Ncbg)} = <b>${fmt(s.pryout.Vcpg)} kg</b></div>
+      <div class="result">φV<sub>cpg</sub> = 0.70×${fmt(s.pryout.Vcpg)} = <b>${fmt(s.pryout.phiVcpg)} kg</b></div>
+    </div>
+  </details>
+
+  <details open><summary>10. สรุปผลตรวจสอบและผลรวมปฏิสัมพันธ์ — ACI 17.8</summary>
+    <div class="step">
+      <p>รวบรวมกำลังต้านทานที่ลดค่าแล้ว (φR<sub>n</sub>) ของทุกโหมดที่เกี่ยวข้อง หาค่าน้อยที่สุดของแต่ละประเภทแรง แล้วตรวจสอบผลรวมปฏิสัมพันธ์ตาม ACI 17.8.3</p>
+      <div class="line">φN<sub>n</sub> = MIN(โหมดแรงดึงที่ใช้งานได้ทั้งหมด) = <b>${fmt(res.phiNn)} kg</b></div>
+      <div class="line">φV<sub>n</sub> = MIN(โหมดแรงเฉือนที่ใช้งานได้ทั้งหมด) = <b>${fmt(res.phiVn)} kg</b></div>
+      <div class="line">N<sub>ua</sub>/φN<sub>n</sub> = ${inp.Nua}/${fmt(res.phiNn)} = <b class="${res.ratioN<=1?'pass':'fail'}">${res.ratioN.toFixed(3)}</b></div>
+      <div class="line">V<sub>ua</sub>/φV<sub>n</sub> = ${inp.Vua}/${fmt(res.phiVn)} = <b class="${res.ratioV<=1?'pass':'fail'}">${res.ratioV.toFixed(3)}</b></div>
+      ${cond(res.ratioN<=0.2 ? `N<sub>ua</sub>/φN<sub>n</sub> ≤ 0.2 → ตรวจสอบเฉพาะ V<sub>ua</sub>/φV<sub>n</sub> ≤ 1.0` : (res.ratioV<=0.2 ? `V<sub>ua</sub>/φV<sub>n</sub> ≤ 0.2 → ตรวจสอบเฉพาะ N<sub>ua</sub>/φN<sub>n</sub> ≤ 1.0` : `ทั้งสองอัตราส่วน &gt; 0.2 → ใช้เกณฑ์ผลรวม (N<sub>ua</sub>/φN<sub>n</sub>)+(V<sub>ua</sub>/φV<sub>n</sub>) ≤ 1.2`))}
+      <div class="line">ผลรวม = ${res.ratioN.toFixed(3)}+${res.ratioV.toFixed(3)} = <b class="${res.ratioSum<=1.2?'pass':'fail'}">${res.ratioSum.toFixed(3)}</b> (เกณฑ์ ≤ 1.2)</div>
+      <div class="${res.ok?'result':'warn'}">${res.ok?'✓ ผ่านเกณฑ์ (OK)':'✗ ไม่ผ่านเกณฑ์ (NG) — ต้องปรับปรุงการออกแบบ เช่น เพิ่มระยะขอบ, ลดความเยื้องศูนย์, เพิ่มขนาด/จำนวน Anchor, หรือออกแบบ Anchor Reinforcement'}</div>
+    </div>
+  </details>
+  `;
+}
+
+/* ============================================================
+   PROJECT TITLE BLOCK
+   ============================================================ */
+function renderTitleBlock(){
+  const proj = $('projName').value || '(ยังไม่ระบุ)';
+  const elem = $('projElement').value || '(ยังไม่ระบุ)';
+  const calcNo = $('projCalcNo').value || '-';
+  const designer = $('projDesigner').value || '(ยังไม่ระบุ)';
+  const checker = $('projChecker').value || '(ยังไม่ระบุ)';
+  const date = $('projDate').value || '-';
+  document.getElementById('reportTitleBlock').innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px 18px;">
+      <div><b>โครงการ:</b> ${proj}</div>
+      <div><b>ชิ้นส่วน/ตำแหน่ง:</b> ${elem}</div>
+      <div><b>เลขที่รายการคำนวณ:</b> ${calcNo}</div>
+      <div><b>ผู้ออกแบบ:</b> ${designer}</div>
+      <div><b>ผู้ตรวจสอบ:</b> ${checker}</div>
+      <div><b>วันที่:</b> ${date}</div>
+    </div>`;
+}
+
+/* ============================================================
+   MASTER UPDATE FUNCTION
+   ============================================================ */
+function update(){
+  const res = calculate();
+  renderDiagram(res);
+  renderVerdict(res);
+  renderBars(res);
+  renderDetails(res);
+  renderTitleBlock();
+}
+
+// wire up all inputs to trigger recalculation
+document.addEventListener('input', update);
+document.addEventListener('change', update);
+
+// default today's date
+(function(){
+  const d = new Date();
+  const dd = String(d.getDate()).padStart(2,'0');
+  const mm = String(d.getMonth()+1).padStart(2,'0');
+  const yyyy = d.getFullYear()+543; // Buddhist Era, conventional for Thai engineering documents
+  $('projDate').value = `${dd}/${mm}/${yyyy}`;
+})();
+
+// initial render
+update();
+</script>
+</body>
+</html>
