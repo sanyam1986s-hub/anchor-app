@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>โปรแกรมออกแบบ Anchor to Concrete — ACI 318-25 บทที่ 17</title>
-<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIuC5guC4m+C4o+C5geC4geC4o+C4oeC4reC4reC4geC5geC4muC4miBBbmNob3IgdG8gQ29uY3JldGUgKEFDSSAzMTgtMjUpIiwgInNob3J0X25hbWUiOiAiQW5jaG9yIERlc2lnbiIsICJkZXNjcmlwdGlvbiI6ICLguYLguJvguKPguYHguIHguKPguKHguK3guK3guIHguYHguJrguJrguYHguKXguLDguJXguKPguKfguIjguKrguK3guJogQW5jaG9yIHRvIENvbmNyZXRlIOC4leC4suC4oSBBQ0kgMzE4LTI1IOC4muC4l+C4l+C4teC5iCAxNyIsICJzdGFydF91cmwiOiAiLiIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjZWVmMWY2IiwgInRoZW1lX2NvbG9yIjogIiMwQjI1NDUiLCAib3JpZW50YXRpb24iOiAicG9ydHJhaXQtcHJpbWFyeSIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQU1BQUFBREFDQVlBQUFCUzNHd0hBQUFFTEVsRVFWUjRuTzNjeTFYYlVBQkZVWm1WR1hWUVFJcHdPYWttNWJpSUZFQWRqTW1JcklUZ2o2VDMxZDI3QUt6QlBYcVNBemt0ZzNsK09iLzN2Z2JxZW51OW5IcGZ3NGV1RjJMc0xFdmZJSnAvc05GelMrc1ltbjJZNGJOV2l4aXFmNERoczFmTkVLcjlZTU9udEJvaEZQK0Joazl0SlVONEt2V0Rsc1g0YWFQa3pvcVVaUGowc3ZjMDJIMENHRDg5N2QzZnJnQ01ueEhzMmVIbUFJeWZrV3pkNDZZQWpKOFJiZG5sNmdDTW41R3QzZWVxQUl5Zkdhelo2Y01CR0Q4emVYU3ZEd1ZnL016b2tkM2VEY0Q0bWRtOS9SYjlWUWlZemMwQTNQMDVnbHM3dmhxQThYTWsxL2JzRVlob1h3Ymc3czhSZmJYcmJ6MHVaRFNYSDc5NlgwSVg1NS9mZTE5Q2QvK2RBTzcrSE5ubmZYc0hJTm8vQWJqN2srRHZuVHNCaVBZbkFIZC9rbnpzM1FsQU5BRVE3V2xaUFA2UTZmbmwvTzRFSUpvQWlDWUFvZ21BYUU5ZWdFbm1CQ0NhQUlnbUFLSUpnR2dDSUpvQWlIYnlOV2hadGYrKzJOL3hsdVVFSUpvQWlDWUFvZ21BYUFJZ21nQ0lKZ0NpQ1lCb0FpQ2FBSWdtQUtJSmdHZ0NJSm9BaUNZQW9nbUFhQUlnbWdDSUpnQ2lDWUJvQWlDYUFJZ21BS0lKZ0dnQ0lKb0FpQ1lBb2dtQWFBSWdtZ0NJSmdDaUNZQm9BaUNhQUlnbUFLSUpnR2dDSUpvQWlDWUFvZ21BYUFJZ21nQ0lKZ0NpQ1lCb0FpQ2FBSWdtQUtJSmdHZ0NJSm9BaUNZQW9nbUFhQUlnbWdDSUpnQ2lDWUJvQWlDYUFJZ21BS0lKZ0dnQ0lKb0FpQ1lBb2dtQWFBSWdtZ0NJSmdDaUNZQm9BaUNhQUlnbUFLSUpnR2dDSUpvQWlDWUFvZ21BYUFJZ21nQ0lKZ0NpQ1lCb0FpQ2FBSWdtQUtJSmdHZ0NJSm9BaUhaNmZqbS85NzZJR1Z4Ky9PcDlDYXVjZjM3dmZRbFRjQUk4YUtaQnpYU3R2UWxnaFJtR05jTTFqa1FBUkJQQVNpUGZZVWUrdGxFSllJTVJoemJpTmMxQUFCdU5OTGlScm1VMkF0akI4T1luZ0oxNlI5RDc4MmNuZ0lrWi8zNENLS0RIRUkyL0RBRVUwbktReGwrT0FBb3l6UGtJb0xEYUVZaXNMQUZNeFBqTEUwQUZOWVpxL0hVSW9CS0RuWU1BS2lvVmdaanFFVUJsZThkci9IVUpZR0RHWDU4QUd0Z3laT052UXdDTkdQU1lCTkRRb3hHSXBSMEJOSFp2M01iZmxnQTZ1RFp5NDI5UEFFUVRRQ2VmNy9idS9uMDh2YjFlVHIwdkl0WEg2STIvbjlPeUxJdi9INVJVSG9HSUpnQ2lQUzNMc25nUElOSGI2K1hrQkNDYUFJajJKd0NQUVNUNTJMc1RnR2dDSU5vL0FYZ01Jc0hmTzNjQ0VPMi9BSndDSE5ubmZUc0JpUFpsQUU0Qmp1aXJYVHNCaUhZMUFLY0FSM0p0enpkUEFCRndCTGQyN0JHSVE3dDNFNzhiZ0ZPQUkzdm9CQkFCTTNwa3R3OC9Bb21BbVR5NjExWHZBQ0pnQm10MnV2b2xXQVNNYk8wK04zMExKQUpHdEdXWG03OEdGUUVqMmJySFhmOE9JQUpHc0dlSFJRYnNmNWFqaHhJMzRLSjNjQ0hRU3Ftbmo2Sy9DdUdSaUJaSzdxemFZSjBHbEZiakJsdjlqaTBFOXFyNVpOSHNrVVVJck5YaWticjVNN3NRdUtYMWUyVFhsMVl4c0N4OXZ6ejVEZU8wL2ppY2loZmdBQUFBQUVsRlRrU3VRbUNDIiwgInNpemVzIjogIjE5MngxOTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifSwgeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFnQUFBQUlBQ0FZQUFBRDBlTlQ2QUFBTm5rbEVRVlI0bk8zY3dYbmJPQnVGVVRyUHYwc2RLV0NLY0RtcEp1VzRpQlNRT3JMT2JIN0ZHdG15UlJJa1B1Q2UwOEJRME9LK2hKeDVXaWpwNjdmblA3MmZBYUNGMzc5ZW5uby9BMi81VWpveThnQUNvUmVIZmdKREQ3Q09LRGllQXo2QXdRZG9TeEMwNTBBYk1mb0E1eEVFK3puQWpRdytRQTFpWUJ1SHRvTFJCNmhORER6T1FUM0E4QU9NUnd4OHpPSGNZZlFCNWlFRzNuSWdOd3cvd0x5RXdDc0g4WCtHSHlDSEVBZ1BBS01Qa0MwNUJDSS91T0VINEZwaUNNUjlZT01Qd0QxSklSRHpRUTAvQUk5S0NJSHBQNkRoQjJDcm1VTmcyZzltK0FGb1lkWUltUEpER1g4QVdwc3RCS2I2TUlZZmdLUE5FZ0pmZWo5QUs4WWZnRFBNc2pmRFY4d3NYd1FBNHhuNU5tRG9Hd0RqRDBCUEkrL1FzQUV3OHFFRE1JOVI5Mmk0cTR0UkR4cUErWTMwazhCUU53REdINERLUnRxcFlRSmdwRU1GSU5jb2UxWCtxbUtVZ3dTQWE5Vi9EaWo5Y01ZZmdORlZEWUd5UHdFWWZ3Qm1VSFhQU2daQTFjTUNnQzBxN2xxNUFLaDRTQUN3VjdWOUt4VUExUTRIQUZxcXRITmxBcURTb1FEQVVhcnNYWWtBcUhJWUFIQ0dDcnZYUFFBcUhBSUFuSzMzL25VTmdONGZIZ0I2NnJtRDNRTEErQU5Bdnozc0VnREdId0JlOWRqRjB3UEErQVBBVzJmdjQ2a0JZUHdCNEw0emQvSzBBREQrQUZCSDkzOEdDQUM4T3V1RitaUUE4UFlQQUk4N1l6Y1BEd0RqRHdEckhiMmZod2FBOFFlQTdZN2NVWDhEQUFDQkRnc0FiLzhBc045UmUzcElBQmgvQUdqbmlGMXRIZ0RHSHdEYWE3MnYvZ1lBQUFJMURRQnYvd0J3bkpZNzJ5d0FqRDhBSEsvVjN2b0pBQUFDTlFrQWIvOEFjSjRXdTdzN0FJdy9BSnh2Ny83NkNRQUFBdTBLQUcvL0FORFBuaDEyQXdBQWdUWUhnTGQvQU9odjZ4NjdBUUNBUUpzQ3dOcy9BTlN4WlpmL2Q4Wi9CRnA3K2Y2ejl5UEFYODgvL3VuOUNMQ2Fud0FBWUFKclg5QlhCWUMzZndDWWd4c0FBSmpFbWhkMUFRQUFnUjRPQU5mL0FGRGZvM3Z0QmdBQUFqMFVBTjcrQVdBY2oreTJHd0FBQ1BScEFIajdCNER4ZkxiZmJnQUFJSkFBQUlCQUh3YUE2MzhBR05kSE8rNEdBQUFDM1EwQWIvOEFNTDU3ZSs0R0FBQUNDUUFBQ1BSdUFMaitCNEI1dkxmcmJnQUFJSkFBQUlCQUFnQUFBcjBKQUwvL0E4QjhidmZkRFFBQUJCSUFBQkRvUHdIZytoOEE1blc5ODI0QUFDQ1FBQUNBUUFJQUFBTDlEUUMvL3dQQS9DNTc3d1lBQUFJSkFBQUlKQUFBSUpBQUFJQkFBZ0FBQW4xWkZ2OENBQUNTZlAzMi9NY05BQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUTZJdC9BZ2dBZWR3QUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUdlL0srQW9hK1g3ejk3UDBJWHp6Lys2ZjBJRU0wTkFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnUVFBQUFRU0FBQVE2T25ydCtjL3ZSOENLbnI1L3JQM0k5REE4NDkvZWo4Q2xPUUdBTzR3SE9QekhjSjlBZ0ErWUVERzVidURqd2tBQUFna0FPQVQzaVRINHp1RHp3a0FlSUJCR1lmdkNoNGpBT0JCaHFVKzN4RThUZ0RBQ2dhbUx0OE5yQ01BQUNDUUFJQ1Z2R25XNHp1QjlRUUFiR0J3NnZCZHdEWUNBRFl5UFAzNURtQTdBUUE3R0NCZ1ZBSUFHSkw0Z24wRUFPeGtpTTduekdFL0FRQU5HS1R6T0d0b1F3QkFJNGJwZU00WTJoRUEwSkNCQWtZaEFJQWhpQ3RvU3dCQVk0YXFQV2NLN1FrQU9JREJhc2Rad2pFRUFCekVjTzNuRE9FNEFnQU9aTUNBcWdRQVVKSjRnbU1KQURpWUlWdlBtY0h4QkFDY3dLQTl6bG5CT1FRQW5NU3dmYzRad1hrRUFKekl3QUZWQ0FDZ0JIRUU1eElBY0RKRDk1WXpnZk1KQU9qQTRMMXlGdENIQUlCT0RCL1Frd0NBanRJaklQM3pRMDhDQU9qQytFTmZBZ0E2U3h6Q3hNOE0xUWdBS0NCcEVKTStLMVFtQUtBSXd3aWNTUUJBSWJOSHdPeWZEMFlpQUtDWVdVZHkxczhGb3hJQXdPR01QOVFqQUtDZ21RWnpwczhDTXhFQVVKVGhCSTRrQUtDdzBTTmc5T2VIbVFrQUtHN1VFUjMxdVNHRkFBQ2FNLzVRbndDQUFSaFVvRFVCQUlNWUpRSkdlVTVJSndCZ0lOWEh0ZnJ6QWE4RUFBeW02c2hXZlM3Z2ZRSUEyTTM0dzNnRUFBekk0QUo3Q1FBWVZKVUlxUEljd0RvQ0FBYldlM3g3Ly9lQjdRUUFESzdYQ0J0L0dKc0FBRll6L2pBK0FRQVRNTWpBV2dJQUpuRldCSWdObUlNQWdJa2NQYzdHSCtZaEFHQXlSNDIwOFllNUNBRGdVOFlmNWlNQVlFSUdHL2lNQUlCSnRZb0FNUUZ6K3ZMNzE4dFQ3NGNBanJGM3ZJMC96TXNOQUV4dTY0Z2JmNWliQUFDQVFBSUFBcXg5bS9mMkQvTVRBQkRpMFZFMy9wQkJBRUNRejhiZCtFTU9BUUJoN28yODhZY3NBZ0FBQW4xWmxtWHgvd0tBTExkdis5NytJY3Z2WHk5UGJnQWcxR1gwalQ5a0VnQVF6UGhETGdFQUFJRUVBQUFFK2hzQS9oQVFBT1ozMlhzM0FBQVFTQUFBUUNBQkFBQ0IvaE1BL2c0QUFPWjF2Zk51QUFBZ2tBQUFnRUFDQUFBQ3ZRa0Fmd2NBQVBPNTNYYzNBQUFRU0FBQVFLQjNBOERQQUFBd2ovZDIzUTBBQUFRU0FBQVE2RzRBK0JrQUFNWjNiOC9kQUFCQUlBRUFBSUUrREFBL0F3REF1RDdhY1RjQUFCQklBQURBaEQ2N3hmODBBUHdNQUFEemNRTUFBSUVlQ2dDM0FBQXdqa2QyMncwQUFBUjZPQURjQWdCQWZZL3V0UnNBQUFpMEtnRGNBZ0JBWFd0MjJnMEFBQVJhSFFCdUFRQ2duclg3N0FZQUFBSnRDZ0MzQUFCUXg1WmRkZ01BQUlFMkI0QmJBQURvYitzZXV3RUFnRUM3QXNBdEFBRDBzMmVIZDk4QWlBQUFPTi9lL2ZVVEFBQUVhaElBYmdFQTREd3RkdGNOQUFBTXBOVkxkN01BY0FzQUFPTm9lZ01nQWdEZ09DMTMxazhBQURDQTFpL1p6UVBBTFFBQTFIZklEWUFJQUlCMmp0alZ3MzRDRUFFQXNOOVJlK3B2QUFDZ3FDTmZwZzhOQUxjQUFGRFQ0VGNBSWdBQTFqdDZQMC81Q1VBRUFNRGp6dGpOMC80R1FBUUF3T2ZPMmt0L0JBZ0FSWno1c254cUFMZ0ZBSUFhVHI4QkVBRUE4TmJaKzlqbEp3QVJBQUN2ZXV4aXQ3OEJFQUVBMEc4UHUvNFJvQWdBSUZuUEhleityd0JFQUFDSmV1OWY5d0JZbHY2SEFBQm5xckI3SlFKZ1dXb2NCZ0FjcmNyZWxRbUFaYWx6S0FCd2hFbzdWeW9BbHFYVzRRQkFLOVgyclZ3QUxFdTlRd0tBUFNydVdya0h1dmIxMi9PZjNzOEFBRnRWSFA2THNnOTJUUWdBTUpySzQ3OHNSWDhDdUZYOUVBSGcyZ2k3TlVRQUxNc1lod2tBbyt6VkVBOTV6YzhCQUZRMHl2QmZEUFd3MTRRQUFGV01OdjdMTXRCUEFMZEdQR3dBNWpQcUhnMzUwTmZjQkFEUXc2akRmekgwdzE4VEFnQ2NaZlR4WDVhSkFtQlpSQUFBeDVwaCtDK20rU0RYaEFBQXJjMDAvc3N5YVFBc2l3Z0FvSTNaaHY5aXlnOTFUUWdBc05XczQ3OHNBUUZ3SVFRQWVOVE13Mzh4L1FlOEpRUUF1Q2RoK0M5aVB1Z3RJUURBUmRMd1g4Ujk0RnRDQUNCWDR2QmZ4SDd3VzBJQUlFZnk4Ri9FSDhBdElRQXdMOFAveWtIY0lRUUE1bUQwMytkUUhpQUdBTVpqK0QvbWNGWVFBZ0MxR2YzSE9haU54QUJBRFVaL0c0ZldpQ0FBT0kvUjM4OEJIa0FNQUxSbDhOdHpvQ2NRQkFEckdQempPZUNPaEFHQXNlL2xYK1pnanBMZ1ZnZjZBQUFBQUVsRlRrU3VRbUNDIiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifV19">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIuC5guC4m+C4o+C5geC4geC4o+C4oeC4reC4reC4geC5geC4muC4miBBbmNob3IgdG8gQ29uY3JldGUgKEFDSSAzMTgtMjUpIiwgInNob3J0X25hbWUiOiAiQW5jaG9yIERlc2lnbiIsICJkZXNjcmlwdGlvbiI6ICLguYLguJvguKPguYHguIHguKPguKHguK3guK3guIHguYHguJrguJrguYHguKXguLDguJXguKPguKfguIjguKrguK3guJogQW5jaG9yIHRvIENvbmNyZXRlIOC4leC4suC4oSBBQ0kgMzE4LTI1IOC4muC4l+C4l+C4teC5iCAxNyIsICJzdGFydF91cmwiOiAiLiIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjZWVmMWY2IiwgInRoZW1lX2NvbG9yIjogIiMwQjI1NDUiLCAib3JpZW50YXRpb24iOiAicG9ydHJhaXQtcHJpbWFyeSIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQU1BQUFBREFDQVlBQUFCUzNHd0hBQUFGR0VsRVFWUjRuTzNkUVc3VVdCUUYwSmVvQjBnc0E3RUJOc0NJbHBqMVhwQjZFUzFsTHoxRGFrWnNnQTJnTEFNcE0zcFVLQ1JWbFhMNTIvN2Y5NXc1NVJyYys5OXp4UlkzMVpuWGJ6LzgzUG83c0t3ZjM3L2NiUDBkRGpiOUlzSk8xYmFGV1AzQ1FzODVhNWRodFlzSlBsT3RVWWJGTHlENHpMVmtFUmI3WU1HbnRTV0swUHdEQlorbHRTekNiYXNQcWhKKzF0RXlaMDJhSlBoc1plNDBtRDBCaEo4dHpjM2ZyQUlJUHoyWWs4T3JDeUQ4OU9UYVBGNVZBT0duUjlma2NuSUJoSitlVGMzbnBBSUlQeU9Za3RPTEN5RDhqT1RTdkY1VUFPRm5SSmZrOXNVQ0NEOGpleW0vVFIrRmdOR2NMWURUbnowNGwrT1RCUkIrOXVSVW5xMUFSRHRhQUtjL2UzUXMxeVlBMFo0VndPblBuajNOdHdsQXROOEs0UFFud2VPY213QkUrMVVBcHo5SkRuazNBWWoyeDlaZjRPRGQ1L2VyWHUvYng2K3JYT2V2di8rYjllLy8vZWZQUnQva092ZDNEN1ArL1p0UHJ4cDlrMlhjVmxsL3lQVDY3WWVmVmlDaUtRRFJGSUJvQ2tDMFd6ZkFKRE1CaUtZQVJGTUFvaWtBMFJTQWFBcEFOQVVnbWdJUXJadkhvVWMzOTdIbnFaKzc5V1BTZTJFQ0VLMmJDWERxQlpXNUw4cXM5ZUlMWXpJQmlOYk5CQmpkcVoxODlGY2k5ODRFSUpvQ0VFMEJpS1lBUkZNQW9pa0EwUlNBYUFwQU5BVWdtZ0lRVFFHSXBnQkVVd0NpS1FEUlBBN2RpRmNpeDJRQ0VFMEJpS1lBUkhNUDBJaFhJc2RrQWhCTkFZaW1BRVJUQUtJcEFORVVnR2dLUURRRklKb0NFRTBCaUtZQVJGTUFvaWtBMFJTQWFCNkhic1Fya1dNeUFZaW1BRVJUQUtLNUIyakVLNUZqTWdHSXBnQkVVd0NpS1FEUkZJQm9Da0EwQlNDYUFoQk5BWWltQUVSVEFLSXBBTkVVZ0dnS1FEU1BRemZpbGNneG1RQkVVd0NpS1FEUjNBTTA0cFhJTVprQVJGTUFvaWtBMFJTQWFHNkNxYXFxKzd1SFZULzN6YWRYaTF4dktoT0FhQXBBTkFXZ3F0WmRTWHBaZjZvVWdIQUtRRFFGSUpvQzhNc2F1M2xQKzM5VkIzOEhlUGY1L2FhZi8rM2oxMFd2VDk4Mm53QmJCbEQ0Mlh3QzdJVlhJc2UwK1FTbzJ1WWtkdm9mdCtTTzN0ditYOVZKQWFyV0RhVHdjOUJOQVdBTE42L2Zmdmk1OVpkNGJPbGZoZFkrL1VkNEpmTCs3dUczOVdTcEowT2ZYcU9IbGFpN0NiQmtRSzArengzQy9qajBTd1R6V01HV0t0b1UzUldnU2xEWDhqU0E5M2NQaTRieTJPZHZYWUtZbjBHVjZybkRxYnhHS0k5OXBoWG9qSmFCRmY3enRnaGlEK0d2NnJnQVZZSzdwamVmWHEzMkxGQXY0YS9xdkFBdEtORTAvaERXR1FGZVgrdFR1cmRULzdIdUMxQjFmUW1VaDVjTVVZQnJDRCtYR0tZQUFyMitGbXRMcjZ2UHdUQUZxTHE4Qk1yQ3BZWXFRTlhMNFJaK3BoaXVBTkRTa0FVNGRjbzcvZHViczhQM3Z2OVhEVnFBcXVkaEYzNnVNV3dCb0lXaEMzQTQ5WjMrWEt1N044TG8wOVJIcEVmWS82c0dud0F3bHdJUXpRcEVOQk9BYUFwQU5BVWdtZ0lRVFFHSXBnQkVVd0NpS1FEUkZJQm9Da0MwMngvZnY5eHMvU1ZnS3lZQTBSU0FhQXBBdE51cUt2Y0JKUHJ4L2N1TkNVQTBCU0RhcndKWWcwaHl5THNKUURRRklOcHZCYkFHa2VCeHprMEFvajByZ0NuQW5qM050d2xBdEtNRk1BWFlvMk81TmdHSWRySUFwZ0I3Y2lyUFp5ZUFFckFINTNKc0JXTFhYanJFWHl5QUtjQ2VYVFFCbElBUlhaTGJpMWNnSldBa2wrWjEwajJBRWpDQ0tUbWRmQk9zQlBSc2FqNnYraFZJQ2VqUk5ibTgrbWRRSmFBbjErWngxdDhCbElBZXpNbGhrd0Q3bnliWlFvc0R1T2tKcmdpc3BkWDIwZlJSQ0NzUmEyaVpzOFVDYXhyUTJoSUg3T0ludGlJdzE1S2J4V29yaXlJdzFSb3I5ZW83dXlKd3p0cjNrWnZldENvRFZkditlUEkvbkw5L1BrcFoxOTRBQUFBQVNVVk9SSzVDWUlJPSIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIiwgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIn0sIHsic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBZ0FBQUFJQUNBWUFBQUQwZU5UNkFBQVBYa2xFUVZSNG5PM2R6NDBUU1IvSDRRWnhRQ0lNUkFJa3NDZVE5a1l1U0FTQlJDN2NWb0lUQ1pBQUlveVZ1UEZlWHUrWW1iSGRkbmY5L1Q3UGZYZXJhdysvVDFWNzdDY0xYWHJ4NnMzdjFtc0EyTU8vUDc0K2FiMEdIdkkvcFNGREhrQWd0R0xUS3pEb0FhNGpDc3F6d1FVWStBRDdFZ1Q3czZFN01mUUI2aEVFMjluQUd4bjRBSDBRQTdleGFWY3c5QUg2SmdiV3MxRXJHUHdBNHhFRDU5bWNFd3g5Z0htSWdZZHN5RDBHUDhDOGhNQWRHL0YvQmo5QURpRVFIZ0NHUGtDMjVCQ0lmSENESDRCamlTRVE5OENHUHdDbkpJVkF6SU1hL0FDc2xSQUMweitnd1EvQXJXWU9nV2tmek9BSFlBK3pSc0NVRDJYNEE3QzMyVUpncW9jeCtBRW9iWllRZU5wNkFYc3gvQUdvWVpaNU0zekZ6UEkvQW9EeGpId2JNUFFOZ09FUFFFc2p6NkZoQTJEa1RRZGdIcVBPbytHdUxrYmRhQURtTjlJcmdhRnVBQXgvQUhvMjBwd2FKZ0JHMmxRQWNvMHlyN3EvcWhobEl3SGdXTyt2QTdwZW5PRVB3T2g2RFlGdVh3RVkvZ0RNb05kNTFtVUE5THBaQUhDTEh1ZGFkd0hRNHlZQndGYTl6YmV1QXFDM3pRR0FQZlUwNTdvSmdKNDJCUUJLNldYZWRSRUF2V3dHQU5UUXc5eHJIZ0E5YkFJQTFOWjYvalVOZ05ZUER3QXR0WnlEelFMQThBZUFkdk93U1FBWS9nQndwOFZjckI0QWhqOEFQRlI3UGxZTkFNTWZBRTZyT1NlckJZRGhEd0Q5YVA1bmdBREFuVm9INWlvQjRQUVBBT3ZWbUp2RkE4RHdCNERybFo2ZlJRUEE4QWVBMjVXY296NERBQUNCaWdXQTB6OEFiRmRxbmhZSkFNTWZBUFpUWXE3dUhnQ0dQd0RzYisvNTZqTUFBQkJvMXdCdytnZUFjdmFjczdzRmdPRVBBT1h0TlcrOUFnQ0FRTHNFZ05NL0FOU3p4OXpkSEFDR1B3RFV0M1grZWdVQUFJRTJCWURUUHdDMHMyVU91d0VBZ0VBM0I0RFRQd0MwZCtzOGRnTUFBSUZ1Q2dDbmZ3RG94eTF6K2VvQU1Qd0JZSHhlQVFEQUJLNDlvRjhWQUU3L0FEQUhOd0FBTUlsckR1b0NBQUFDclE0QTEvOEEwTCsxODlvTkFBQUVXaFVBVHY4QU1JNDFjOXNOQUFBRXVoZ0FUdjhBTUo1TDg5c05BQUFFRWdBQUVPaHNBTGorQjRCeG5admpiZ0FBSU5ESkFIRDZCNER4blpybmJnQUFJSkFBQUlCQWp3YUE2MzhBbU1kamM5ME5BQUFFRWdBQUVPaFo2d1drZWYzUFg2MlgwTFh2ZjM5cnZZUnV2ZnZ3cGZVU1Z2bjg4VzNySlV6cDU2ZGZyWmV3eXN2M3oxc3ZnWlVlM0FCNC93OEE4N2svMzcwQ0FJQkFBZ0FBQXYwUkFLNy9BV0JleDNQZURRQUFCQklBQUJCSUFBQkFvUDhDd1B0L0FKamZZZDY3QVFDQVFBSUFBQUlKQUFBSUpBQUFJSkFBQUlCQVQ1ZkZYd0FBUUpJWHI5NzhkZ01BQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUjY2azhBQVNDUEd3QUFDQ1FBQUNDUUFBQ0FRQUlBQUFJSkFBQUlKQUFBSUpBQUFJQkFBZ0FBQWdrQUFBZ2tBQUFna0FBQWdFQUNBQUFDQ1FBQUNDUUFBQ0RRczlZTGdDVHZQbnhwdllUaXRqemo1NDl2ZDF3SmNJNGJBQUFJSkFBQUlKQUFBSUJBQWdBQUFna0FBQWprcndBcSsvNzN0NXYvMmRmLy9MWGpTc3JaOG93QTFPRUdBQUFDQ1FBQUNDUUFBQ0NRQUFDQVFBSUFBQUw1S3dDb2FNdDMzWS95T3dLK3p4L0c0QVlBQUFJSkFBQUlKQUFBSUpBQUFJQkFBZ0FBQWdrQUFBZ2tBQUFna0FBQWdFQUNBQUFDQ1FBQUNDUUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBQUFJSkFBQUlCQUFnQUFBZ2tBQUFna0FBQWdrQUFBZ0VBQ0FBQUNDUUFBQ0NRQUFDQ1FBQUNBUUFJQUFBSUpBQUFJSkFBQUlKQUFBSUJBQWdBQUFna0FBQWdrQUFBZ2tBQUFnRUFDQUFBQ0NRQUFDQ1FBQUNDUUFBQ0FRQUlBQUFJSkFBQUlKQUFBSU5DejFndUFKTzgrZkdtOWhPSzJQT1BuajI5M1hBbHdqaHNBQUFna0FBQWdrQUFBZ0VBQ0FBQUNDUUFBQ0NRQUFDQ1FBQUNBUUFJQUFBSUpBQUFJSkFBQUlKQUFBSUJBZmdzQUt0cnlYZmVqL0k2QTcvT0hNYmdCQUlCQUFnQUFBZ2tBQUFna0FBQWdrQUFBZ0VBQ0FBQUNDUUFBQ0NRQUFDQ1FBQUNBUUFJQUFBSUpBQUFJSkFBQUlKQUFBSUJBQWdBQUFna0FBQWdrQUFBZ2tBQUFnRUFDQUFBQ0NRQUFDQ1FBQUNDUUFBQ0FRQUlBQUFJSkFBQUlKQUFBSUpBQUFJQkFBZ0FBQWdrQUFBZ2tBQUFna0FBQWdFQUNBQUFDQ1FBQUNDUUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBQUFJSkFBQUlCQUFnQUFBajFydlFCSTh1N0RsOVpMS0c3TE0zNysrSGJIbFFEbnVBRUFnRUFDQUFBQ0NRQUFDQ1FBQUNDUUFBQ0FRQUlBQUFJSkFBQUlKQUFBSUpBQUFJQkFBZ0FBQWdrQUFBamt0d0Nnb2kzZmRUL0s3d2o0UG44WWd4c0FBQWdrQUFBZ2tBQUFnRUFDQUFBQ0NRQUFDQ1FBQUNDUUFBQ0FRQUlBQUFJSkFBQUlKQUFBSUpBQUFJQkFBZ0FBQWdrQUFBZ2tBQUFna0FBQWdFQUNBQUFDQ1FBQUNDUUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBQUFJSkFBQUlCQUFnQUFBZ2tBQUFna0FBQWdrQUFBZ0VBQ0FBQUNDUUFBQ0NRQUFDQ1FBQUNBUUFJQUFBSUpBQUFJSkFBQUlKQUFBSUJBQWdBQUFna0FBQWdrQUFBZzBMUFdDNEFrN3o1OGFiMkU0clk4NCtlUGIzZGNDWENPR3dBQUNDUUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBQUFJSkFBQUlCQUFnQUFBZ2tBQUFna0FBQWdrQUFBZ0VCK0N3QXEydkpkOTZQOGpvRHY4NGN4dUFFQWdFQUNBQUFDQ1FBQUNDUUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBQUFJSkFBQUlCQUFnQUFBZ2tBQUFna0FBQWdrQjhEQXFqazU2ZGZyWmRRM0pabmZQbisrWTRyNFJJM0FBQVFTQUFBUUNBQkFGQ0pLKzdUN0UxOUFnQUFBZ2tBQUFna0FBQWdrQUFBcU1pNzdvZnNTUnNDQUFBQ0NRQUFDQ1FBQUNDUUFBQ0FRQUlBb0RJZmVydGpMOW9SQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUEzNDhKczlhRTBBQUVBZ0FRQUFnUVFBQUFSNjFub0JNM3Y5ejErdGw5REUzcy85L2U5dnUvNzdvQmN2M3o5ZmZuNzYxWG9aVFhqLzM1NGJnSUlNcnUzc0lVQVpBZ0FBQWdtQXdweGdiMmZ2QU1vUkFCVVlaTmV6WndCbCtSQWdWUFR1dzVmV1N5aHV5ek4rL3ZoMng1V01JZkdEZ0Q0QTJBYzNBSlU0MGE1bnJ3REtFd0FWR1d5WDJTT0FPZ1FBQUFRU0FKVTU0WjVtYndEcUVRQU5HSFFQMlJPU0pYMG9MdWxaZXljQUFDQ1FBR2pFaWZlT3ZRQ29Ud0EwWlBEWkE0QldCQUJBQnhMZWpTYzg0MGdFUUdQSkorRGtad2RvVFFCMHdDQUV1SlAyMWNpdCtDMEFta2lObmkzZmRUL0s3d2drZnAvL0pUOC8vWEw5dmRKaCtOdXo4dHdBZENKcElDWTlLeHdQTkU3NytlbVhQYXBNQUhURVlJUzVYUnB5TTU5NHp6M2JxVDBSQkdVSkFLb1NPU1F4Mk01YmMrcTNWK1VJZ003TVBDQm5mamE0YjgxZ1N4NXUxeng3OGo2VkpBQTZaRkRDMkF5MzA5TERweWNDZ0NwRURaeVdNaFMzUEdQQy90UW1BRG8xMDhDYzZWbmdrcTFEYnNZUEFyNTgvM3p6QUo5eFgxb1RBQjB6T0dFOFd3ZlZqQ2ZkTGMvMDh2MXp3NzhRQVVCUklvWkVodFkrN0dGWkFxQnpJdy9Ra2RjT2V6REFiaU9nNmhBQUF6QklZVnlHMlhYc1ZUMENnQ0pFQy96SllEdFBLTlVuQUFZeDBrQWRhYTFRa3lIM09IdlNoZ0FZaU1FS2N6RHc3dGlMZGdUQVlIcVBnTjdYQjcxSUgzeHVROW9UQU96RzhJZnJwQTdCeEdmdWtRQVlrRUVMYzBrWmlLbkIweXNCTUtqZUlxQzM5Y0JvWmgrT016L2JxQVFBbXhuK3NKL1pCdVhzWVRNeUFUQXdneGZtTk12UW5PRVpaaVlBQnRjNkFsci85MkZtSXcvUWtkZWVRZ0J3TThNZllGd0NZQUlHTVFEWEVnQ1RxQjBCb2dOZ2JBS0FxeG4rVU0rSTc5SkhYSE1pQVRBUmd4bUF0UVRBWkVwSGdNZ0FtSU1BWURYREgyQWVBbUJDQmpVQWx3aUFTZTBkQWFJQzJobnBRM1VqclRXZEFBQ0FRQUpnWW51ZDJwMytBZVlqQUNhM2RYZ2IvZ0J6RWdBQUVFZ0FCTGoxRk8vMEQvMFk0Y04xSTZ5Uk93SWd4TFhEM1BBSG1Kc0FBSUJBQWlESTJsTzkwei9BL0FSQW1FdkQzZkNIZnZYOGpyM250ZkU0QVFBQWdRUkFvRk9uZktkL2dCd0NJTlQ5WVcvNEEyUVJBQUFRU0FBRU81ejZuZjVoSEQxKzJLN0hOWEhaa3hldjN2eHV2UWdBMXZ2NTZWZnJKZnhCQUl6SkRRQUFCQklBQUJCSUFBQkFJQUVBTUppZTNybjN0QmF1SXdBQUlKQUFBSUJBQWdBQUFna0FnQUgxOE82OWh6VndPd0VBQUlFRUFBQUU4bFhBQUJESURRQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVDZ3AvLysrUHFrOVNJQWdMcmNBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVI2dWl6TDRyc0FBQ0RIdnorK1BuRURBQUNCQkFBQUJCSUFBQkJJQUFCQW9QOEN3QWNCQVdCK2gzbnZCZ0FBQWdrQUFBZ2tBQUFnMEI4QjRITUFBREN2NHpudkJnQUFBZ2tBQUFna0FBQWcwSU1BOERrQUFKalAvZm51QmdBQUFna0FBQWowYUFCNERRQUE4M2hzcnJzQkFJQkFBZ0FBQXAwTUFLOEJBR0I4cCthNUd3QUFDQ1FBQUNEUTJRRHdHZ0FBeG5WdWpyc0JBSUJBQWdBQUpuVHBGdjlpQUhnTkFBRHpjUU1BQUlGV0JZQmJBQUFZeDVxNTdRWUFBQUt0RGdDM0FBRFF2N1h6MmcwQUFBUzZLZ0RjQWdCQXY2NlowMjRBQUNEUTFRSGdGZ0FBK25QdGZIWURBQUNCYmdvQXR3QUEwSTliNXJJYkFBQUlkSE1BdUFVQWdQWnVuY2R1QUFBZzBLWUFjQXNBQU8xc21jT2Jid0JFQUFEVXQzWCtlZ1VBQUlGMkNRQzNBQUJReng1ejF3MEFBQXhrcjBQM2JnSGdGZ0FBeHJIckRZQUlBSUJ5OXB5elhnRUF3QUQyUG1UdkhnQnVBUUNnZjBWdUFFUUFBT3lueEZ3dDlncEFCQURBZHFYbXFjOEFBRUNuU2g2bWl3YUFXd0FBNkZQeEd3QVJBQURYS3owL3E3d0NFQUVBc0Y2TnVWbnRNd0FpQUFBdXF6VXZmUWdRQURwUjg3QmNOUURjQWdCQUg2cmZBSWdBQUhpbzlueHM4Z3BBQkFEQW5SWnpzZGxuQUVRQUFMU2JoMDAvQkNnQ0FFaldjZzQyL3lzQUVRQkFvdGJ6cjNrQUxFdjdUUUNBbW5xWWUxMEV3TEwwc1JrQVVGb3Y4NjZiQUZpV2ZqWUZBRXJvYWM1MUZRREwwdGZtQU1CZWVwdHYzUVhBc3ZTM1NRQ3dSWTl6cmJzRkhYdng2czN2MW1zQWdGdjFPUGdQdWwzWU1TRUF3R2g2SHY3TDB1a3JnUHQ2MzBRQU9EYkMzQm9pQUpabGpNMEVnRkhtMVJDTFBPWjFBQUE5R21Yd0h3eTEyR05DQUlCZWpEYjhsMldnVndEM2pialpBTXhuMUhrMDVLS1B1UWtBb0lWUkIvL0IwSXMvSmdRQXFHWDA0YjhzRXdYQXNvZ0FBTXFhWWZBZlRQTWd4NFFBQUh1YmFmZ3Z5NlFCc0N3aUFJQjl6RGI0RDZaOHFHTkNBSUJielRyOGx5VWdBQTZFQUFCcnpUejRENlovd1B1RUFBQ25KQXorZzVnSHZVOElBSENRTlBnUDRoNzRQaUVBa0N0eDhCL0VQdmg5UWdBZ1IvTGdQNGpmZ1B1RUFNQzhEUDQ3TnVJRUlRQXdCMFAvY1RabEJURUFNQjZEL3p5YmN3VWhBTkEzUTM4OUczVWpNUURRQjBQL05qWnRKNElBb0I1RGZ6c2JXSUFZQU5pWGdiOC9HMXFCSUFDNGpvRmZuZzF1U0JnQUdQYXQvQThpSEhRam9kRjFPd0FBQUFCSlJVNUVya0pnZ2c9PSIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIiwgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIn1dfQ==">
 <meta name="theme-color" content="#0B2545">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Anchor Design">
-<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAELElEQVR4nO3cy1XbUABFUZmVGXVQQIpwOakm5biIFEAdjMmIrITgj6T31d27AKzBPXqSAzktg3l+Ob/3vgbqenu9nHpfw4euF2LsLEvfIJp/sNFzS+sYmn2Y4bNWixiqf4Dhs1fNEKr9YMOntBohFP+Bhk9tJUN4KvWDlsX4aaPkzoqUZPj0svc02H0CGD897d3frgCMnxHs2eHmAIyfkWzd46YAjJ8Rbdnl6gCMn5Gt3eeqAIyfGazZ6cMBGD8zeXSvDwVg/Mzokd3eDcD4mdm9/Rb9VQiYzc0A3P05gls7vhqA8XMk1/bsEYhoXwbg7s8RfbXrbz0uZDSXH796X0IX55/fe19Cd/+dAO7+HNnnfXsHINo/Abj7k+DvnTsBiPYnAHd/knzs3QlANAEQ7WlZPP6Q6fnl/O4EIJoAiCYAogmAaE9egEnmBCCaAIgmAKIJgGgCIJoAiHbyNWhZtf++2N/xluUEIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiHZ6fjm/976IGVx+/Op9Caucf37vfQlTcAI8aKZBzXStvQlghRmGNcM1jkQARBPASiPfYUe+tlEJYIMRhzbiNc1AABuNNLiRrmU2AtjB8OYngJ16R9D782cngIkZ/34CKKDHEI2/DAEU0nKQxl+OAAoyzPkIoLDaEYisLAFMxPjLE0AFNYZq/HUIoBKDnYMAKioVgZjqEUBle8dr/HUJYGDGX58AGtgyZONvQwCNGPSYBNDQoxGIpR0BNHZv3MbflgA6uDZy429PAEQTQCef7/bu/n08vb1eTr0vItXH6I2/n9OyLIv/H5RUHoGIJgCiPS3LsngPINHb6+XkBCCaAIj2JwCPQST52LsTgGgCINo/AXgMIsHfO3cCEO2/AJwCHNnnfTsBiPZlAE4BjuirXTsBiHY1AKcAR3JtzzdPABFwBLd27BGIQ7t3E78bgFOAI3voBBABM3pktw8/AomAmTy611XvACJgBmt2uvolWASMbO0+N30LJAJGtGWXm78GFQEj2brHXf8OIAJGsGeHRQbsf5ajhxI34KJ3cCHQSqmnj6K/CuGRiBZK7qzaYJ0GlFbjBlv9ji0E9qr5ZNHskUUIrNXikbr5M7sQuKX1e2TXl1YxsCx9vzz5DeO0/jicihfgAAAAAElFTkSuQmCC">
-<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAELElEQVR4nO3cy1XbUABFUZmVGXVQQIpwOakm5biIFEAdjMmIrITgj6T31d27AKzBPXqSAzktg3l+Ob/3vgbqenu9nHpfw4euF2LsLEvfIJp/sNFzS+sYmn2Y4bNWixiqf4Dhs1fNEKr9YMOntBohFP+Bhk9tJUN4KvWDlsX4aaPkzoqUZPj0svc02H0CGD897d3frgCMnxHs2eHmAIyfkWzd46YAjJ8Rbdnl6gCMn5Gt3eeqAIyfGazZ6cMBGD8zeXSvDwVg/Mzokd3eDcD4mdm9/Rb9VQiYzc0A3P05gls7vhqA8XMk1/bsEYhoXwbg7s8RfbXrbz0uZDSXH796X0IX55/fe19Cd/+dAO7+HNnnfXsHINo/Abj7k+DvnTsBiPYnAHd/knzs3QlANAEQ7WlZPP6Q6fnl/O4EIJoAiCYAogmAaE9egEnmBCCaAIgmAKIJgGgCIJoAiHbyNWhZtf++2N/xluUEIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiHZ6fjm/976IGVx+/Op9Caucf37vfQlTcAI8aKZBzXStvQlghRmGNcM1jkQARBPASiPfYUe+tlEJYIMRhzbiNc1AABuNNLiRrmU2AtjB8OYngJ16R9D782cngIkZ/34CKKDHEI2/DAEU0nKQxl+OAAoyzPkIoLDaEYisLAFMxPjLE0AFNYZq/HUIoBKDnYMAKioVgZjqEUBle8dr/HUJYGDGX58AGtgyZONvQwCNGPSYBNDQoxGIpR0BNHZv3MbflgA6uDZy429PAEQTQCef7/bu/n08vb1eTr0vItXH6I2/n9OyLIv/H5RUHoGIJgCiPS3LsngPINHb6+XkBCCaAIj2JwCPQST52LsTgGgCINo/AXgMIsHfO3cCEO2/AJwCHNnnfTsBiPZlAE4BjuirXTsBiHY1AKcAR3JtzzdPABFwBLd27BGIQ7t3E78bgFOAI3voBBABM3pktw8/AomAmTy611XvACJgBmt2uvolWASMbO0+N30LJAJGtGWXm78GFQEj2brHXf8OIAJGsGeHRQbsf5ajhxI34KJ3cCHQSqmnj6K/CuGRiBZK7qzaYJ0GlFbjBlv9ji0E9qr5ZNHskUUIrNXikbr5M7sQuKX1e2TXl1YxsCx9vzz5DeO0/jicihfgAAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAFGElEQVR4nO3dQW7UWBQF0JeoB0gsA7EBNsCIlpj1XpB6ES1lLz1DakZsgA2gLAMpM3pUKCRVlXL52/7f95w55Rrc+99zxRY31ZnXbz/83Po7sKwf37/cbP0dDjb9IsJO1baFWP3CQs85a5dhtYsJPlOtUYbFLyD4zLVkERb7YMGntSWK0PwDBZ+ltSzCbasPqhJ+1tEyZ02aJPhsZe40mD0BhJ8tzc3frAIIPz2Yk8OrCyD89OTaPF5VAOGnR9fkcnIBhJ+eTc3npAIIPyOYktOLCyD8jOTSvF5UAOFnRJfk9sUCCD8jeym/TR+FgNGcLYDTnz04l+OTBRB+9uRUnq1ARDtaAKc/e3Qs1yYA0Z4VwOnPnj3NtwlAtN8K4PQnweOcmwBE+1UApz9JDnk3AYj2x9Zf4ODd5/erXu/bx6+rXOevv/+b9e///efPRt/kOvd3D7P+/ZtPrxp9k2XcVll/yPT67YefViCiKQDRFIBoCkC0WzfAJDMBiKYARFMAoikA0RSAaApANAUgmgIQrZvHoUc397HnqZ+79WPSe2ECEK2bCXDqBZW5L8qs9eILYzIBiNbNBBjdqZ189Fci984EIJoCEE0BiKYARFMAoikA0RSAaApANAUgmgIQTQGIpgBEUwCiKQDRPA7diFcix2QCEE0BiKYARHMP0IhXIsdkAhBNAYimAERTAKIpANEUgGgKQDQFIJoCEE0BiKYARFMAoikA0RSAaB6HbsQrkWMyAYimAERTAKK5B2jEK5FjMgGIpgBEUwCiKQDRFIBoCkA0BSCaAhBNAYimAERTAKIpANEUgGgKQDSPQzfilcgxmQBEUwCiKQDR3AM04pXIMZkARFMAoikA0RSAaG6Cqaqq+7uHVT/3zadXi1xvKhOAaApANAWgqtZdSXpZf6oUgHAKQDQFIJoC8Msau3lP+39VB38HePf5/aaf/+3j10WvT982nwBbBlD42XwC7IVXIse0+QSo2uYkdvoft+SO3tv+X9VJAarWDaTwc9BNAWALN6/ffvi59Zd4bOlfhdY+/Ud4JfL+7uG39WSpJ0OfXqOHlai7CbBkQK0+zx3C/jj0SwTzWMGWKtoU3RWgSlDX8jSA93cPi4by2OdvXYKYn0GV6rnDqbxGKI99phXojJaBFf7ztghiD+Gv6rgAVYK7pjefXq32LFAv4a/qvAAtKNE0/hDWGQFeX+tTurdT/7HuC1B1fQmUh5cMUYBrCD+XGKYAAr2+FmtLr6vPwTAFqLq8BMrCpYYqQNXL4RZ+phiuANDSkAU4dco7/dubs8P3vv9XDVqAqudhF36uMWwBoIWhC3A49Z3+XKu7N8Lo09RHpEfY/6sGnwAwlwIQzQpENBOAaApANAUgmgIQTQGIpgBEUwCiKQDRFIBoCkC02x/fv9xs/SVgKyYA0RSAaApAtNuqKvcBJPrx/cuNCUA0BSDarwJYg0hyyLsJQDQFINpvBbAGkeBxzk0Aoj0rgCnAnj3NtwlAtKMFMAXYo2O5NgGIdrIApgB7cirPZyeAErAH53JsBWLXXjrEXyyAKcCeXTQBlIARXZLbi1cgJWAkl+Z10j2AEjCCKTmdfBOsBPRsaj6v+hVICejRNbm8+mdQJaAn1+Zx1t8BlIAezMlhkwD7nybZQosDuOkJrgispdX20fRRCCsRa2iZs8UCaxrQ2hIH7OIntiIw15KbxWoriyIw1Ror9eo7uyJwztr3kZvetCoDVdv+ePI/nL9/PkpZ194AAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAFGElEQVR4nO3dQW7UWBQF0JeoB0gsA7EBNsCIlpj1XpB6ES1lLz1DakZsgA2gLAMpM3pUKCRVlXL52/7f95w55Rrc+99zxRY31ZnXbz/83Po7sKwf37/cbP0dDjb9IsJO1baFWP3CQs85a5dhtYsJPlOtUYbFLyD4zLVkERb7YMGntSWK0PwDBZ+ltSzCbasPqhJ+1tEyZ02aJPhsZe40mD0BhJ8tzc3frAIIPz2Yk8OrCyD89OTaPF5VAOGnR9fkcnIBhJ+eTc3npAIIPyOYktOLCyD8jOTSvF5UAOFnRJfk9sUCCD8jeym/TR+FgNGcLYDTnz04l+OTBRB+9uRUnq1ARDtaAKc/e3Qs1yYA0Z4VwOnPnj3NtwlAtN8K4PQnweOcmwBE+1UApz9JDnk3AYj2x9Zf4ODd5/erXu/bx6+rXOevv/+b9e///efPRt/kOvd3D7P+/ZtPrxp9k2XcVll/yPT67YefViCiKQDRFIBoCkC0WzfAJDMBiKYARFMAoikA0RSAaApANAUgmgIQrZvHoUc397HnqZ+79WPSe2ECEK2bCXDqBZW5L8qs9eILYzIBiNbNBBjdqZ189Fci984EIJoCEE0BiKYARFMAoikA0RSAaApANAUgmgIQTQGIpgBEUwCiKQDRPA7diFcix2QCEE0BiKYARHMP0IhXIsdkAhBNAYimAERTAKIpANEUgGgKQDQFIJoCEE0BiKYARFMAoikA0RSAaB6HbsQrkWMyAYimAERTAKK5B2jEK5FjMgGIpgBEUwCiKQDRFIBoCkA0BSCaAhBNAYimAERTAKIpANEUgGgKQDSPQzfilcgxmQBEUwCiKQDR3AM04pXIMZkARFMAoikA0RSAaG6Cqaqq+7uHVT/3zadXi1xvKhOAaApANAWgqtZdSXpZf6oUgHAKQDQFIJoC8Msau3lP+39VB38HePf5/aaf/+3j10WvT982nwBbBlD42XwC7IVXIse0+QSo2uYkdvoft+SO3tv+X9VJAarWDaTwc9BNAWALN6/ffvi59Zd4bOlfhdY+/Ud4JfL+7uG39WSpJ0OfXqOHlai7CbBkQK0+zx3C/jj0SwTzWMGWKtoU3RWgSlDX8jSA93cPi4by2OdvXYKYn0GV6rnDqbxGKI99phXojJaBFf7ztghiD+Gv6rgAVYK7pjefXq32LFAv4a/qvAAtKNE0/hDWGQFeX+tTurdT/7HuC1B1fQmUh5cMUYBrCD+XGKYAAr2+FmtLr6vPwTAFqLq8BMrCpYYqQNXL4RZ+phiuANDSkAU4dco7/dubs8P3vv9XDVqAqudhF36uMWwBoIWhC3A49Z3+XKu7N8Lo09RHpEfY/6sGnwAwlwIQzQpENBOAaApANAUgmgIQTQGIpgBEUwCiKQDRFIBoCkC02x/fv9xs/SVgKyYA0RSAaApAtNuqKvcBJPrx/cuNCUA0BSDarwJYg0hyyLsJQDQFINpvBbAGkeBxzk0Aoj0rgCnAnj3NtwlAtKMFMAXYo2O5NgGIdrIApgB7cirPZyeAErAH53JsBWLXXjrEXyyAKcCeXTQBlIARXZLbi1cgJWAkl+Z10j2AEjCCKTmdfBOsBPRsaj6v+hVICejRNbm8+mdQJaAn1+Zx1t8BlIAezMlhkwD7nybZQosDuOkJrgispdX20fRRCCsRa2iZs8UCaxrQ2hIH7OIntiIw15KbxWoriyIw1Ror9eo7uyJwztr3kZvetCoDVdv+ePI/nL9/PkpZ194AAAAASUVORK5CYII=">
 <style>
 :root{
   --navy:#0B2545; --navy2:#13315C; --navy3:#1c4370; --accent:#C69214; --accent-light:#e8c866;
@@ -107,6 +107,10 @@ footer{text-align:center;padding:24px 20px;color:var(--gray);font-size:11.5px;bo
 
 /* ---- print & email toolbar ---- */
 .action-toolbar{position:sticky;top:10px;z-index:50;display:flex;gap:10px;justify-content:flex-end;margin-bottom:14px;flex-wrap:wrap;}
+.header-inner{position:relative;display:flex;align-items:center;gap:16px;}
+.logo-badge{flex-shrink:0;filter:drop-shadow(0 3px 8px rgba(0,0,0,.3));}
+.action-btn.line{background:#06C755;}
+.action-btn.line:hover{background:#05a648;}
 .action-btn{background:var(--navy);color:#fff;border:none;padding:9px 16px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:7px;box-shadow:var(--shadow-sm);transition:.15s;}
 .action-btn:hover{background:var(--navy2);transform:translateY(-1px);box-shadow:var(--shadow-md);}
 .action-btn.email{background:var(--accent);color:#2a1e00;}
@@ -154,9 +158,34 @@ footer{text-align:center;padding:24px 20px;color:var(--gray);font-size:11.5px;bo
 <body>
 
 <header>
-  <span class="tag">ACI 318-25 — CHAPTER 17</span>
-  <h1>โปรแกรมออกแบบ Anchor to Concrete (เวอร์ชันเว็บ)</h1>
-  <p>ฉบับสมบูรณ์ — ครบทุกโหมดการวิบัติ | ผังตำแหน่งแบบพิกัด (X,Y) สูงสุด 12 ดอก | คำนวณและอัปเดตผลแบบเรียลไทม์</p>
+  <div class="header-inner">
+    <div class="logo-badge">
+      <svg viewBox="0 0 100 100" width="50" height="50">
+        <rect x="0" y="0" width="100" height="100" rx="22" fill="#0B2545"/>
+        <!-- Cast-in Headed Anchor (green) -->
+        <rect x="18" y="16" width="14" height="8" fill="#3ddc84"/>
+        <rect x="21" y="24" width="8" height="38" fill="#3ddc84"/>
+        <polygon points="17,62 33,62 25,74" fill="#3ddc84"/>
+        <!-- Adhesive Threaded Rod (blue) -->
+        <rect x="46" y="16" width="8" height="58" fill="#5b9bff"/>
+        <line x1="43" y1="24" x2="57" y2="24" stroke="#5b9bff" stroke-width="2.4"/>
+        <line x1="43" y1="34" x2="57" y2="34" stroke="#5b9bff" stroke-width="2.4"/>
+        <line x1="43" y1="44" x2="57" y2="44" stroke="#5b9bff" stroke-width="2.4"/>
+        <line x1="43" y1="54" x2="57" y2="54" stroke="#5b9bff" stroke-width="2.4"/>
+        <line x1="43" y1="64" x2="57" y2="64" stroke="#5b9bff" stroke-width="2.4"/>
+        <!-- Mechanical Wedge Anchor (gold) -->
+        <rect x="71" y="16" width="8" height="42" fill="#e8b23d"/>
+        <polygon points="68,58 82,58 78,76 72,76" fill="#e8b23d"/>
+        <line x1="67" y1="66" x2="73" y2="70" stroke="#e8b23d" stroke-width="2"/>
+        <line x1="83" y1="66" x2="77" y2="70" stroke="#e8b23d" stroke-width="2"/>
+      </svg>
+    </div>
+    <div>
+      <span class="tag">ACI 318-25 — CHAPTER 17</span>
+      <h1>โปรแกรมออกแบบ Anchor to Concrete (เวอร์ชันเว็บ)</h1>
+      <p>ฉบับสมบูรณ์ — ครบทุกโหมดการวิบัติ | ผังตำแหน่งแบบพิกัด (X,Y) สูงสุด 12 ดอก | คำนวณและอัปเดตผลแบบเรียลไทม์</p>
+    </div>
+  </div>
 </header>
 
 <div class="wrap">
@@ -164,6 +193,7 @@ footer{text-align:center;padding:24px 20px;color:var(--gray);font-size:11.5px;bo
 <div class="action-toolbar">
   <button class="action-btn" id="installBtn" style="display:none;background:#1a7f37;" onclick="installApp()">📲 ติดตั้งแอปนี้</button>
   <button class="action-btn" onclick="togglePrintOptions()">🖨️ พิมพ์ / บันทึก PDF</button>
+  <button class="action-btn line" onclick="shareLine()">💬 ส่ง LINE</button>
   <button class="action-btn email" onclick="sendEmail()">📧 ส่งอีเมลสรุปผล</button>
 </div>
 
@@ -257,9 +287,9 @@ footer{text-align:center;padding:24px 20px;color:var(--gray);font-size:11.5px;bo
     <div class="card">
       <h2>2. ผังตำแหน่ง Anchor แบบพิกัด (สูงสุด 12 ดอก)</h2>
       <div class="row3">
-        <div class="field"><label>Panel Width (X), cm</label><input type="number" id="panelW" value="30"></div>
-        <div class="field"><label>Panel Height (Y), cm</label><input type="number" id="panelH" value="85"></div>
-        <div class="field"><label>ha (ความหนาคอนกรีต), cm</label><input type="number" id="ha" value="85"></div>
+        <div class="field"><label>Panel Width (X), cm</label><input type="number" id="panelW" value="35.00"></div>
+        <div class="field"><label>Panel Height (Y), cm</label><input type="number" id="panelH" value="35.00"></div>
+        <div class="field"><label>ha (ความหนาคอนกรีต), cm</label><input type="number" id="ha" value="35.00"></div>
       </div>
       <table class="coord-table" id="coordTable">
         <thead><tr><th>#</th><th>X (cm)</th><th>Y (cm)</th></tr></thead>
@@ -284,8 +314,8 @@ footer{text-align:center;padding:24px 20px;color:var(--gray);font-size:11.5px;bo
         </select>
       </div>
       <div class="row2">
-        <div class="field"><label>e'N : ความเยื้องศูนย์แรงดึง (cm)</label><input type="number" id="eN" value="5.0"></div>
-        <div class="field"><label>e'V : ความเยื้องศูนย์แรงเฉือน (cm)</label><input type="number" id="eV" value="5.0"></div>
+        <div class="field"><label>e'N : ความเยื้องศูนย์แรงดึง (cm)</label><input type="number" id="eN" value="0.00"></div>
+        <div class="field"><label>e'V : ความเยื้องศูนย์แรงเฉือน (cm)</label><input type="number" id="eV" value="0.00"></div>
       </div>
     </div>
   </div>
@@ -687,6 +717,27 @@ Vua/phiVn = ${r.ratioV.toFixed(3)}
   window.location.href = mailto;
 }
 
+function shareLine(){
+  if(!lastResult){ alert('กรุณาป้อนข้อมูลให้ครบถ้วนก่อน'); return; }
+  const r = lastResult;
+  const proj = document.getElementById('projName').value || '(ยังไม่ระบุโครงการ)';
+  const elem = document.getElementById('projElement').value || '(ยังไม่ระบุชิ้นส่วน)';
+  const text =
+`📋 สรุปผลตรวจสอบ Anchor to Concrete (ACI 318-25)
+โครงการ: ${proj}
+ชิ้นส่วน: ${elem}
+------------------------
+φNn = ${fmt(r.phiNn)} kg
+φVn = ${fmt(r.phiVn)} kg
+Nua/φNn = ${r.ratioN.toFixed(3)}
+Vua/φVn = ${r.ratioV.toFixed(3)}
+DCR รวม = ${r.ratioSum.toFixed(3)} (เกณฑ์ ≤1.2)
+------------------------
+ผล: ${r.ok ? '✓ ผ่านเกณฑ์ (OK)' : '✗ ไม่ผ่านเกณฑ์ (NG)'}`;
+  const lineUrl = `https://line.me/R/msg/text/?${encodeURIComponent(text)}`;
+  window.open(lineUrl, '_blank');
+}
+
 /* ---- professional CAD-style dimension line helpers (SVG string builders) ---- */
 const DIMCOLOR = '#3d4b5c';
 function svgDefs(){
@@ -695,6 +746,8 @@ function svgDefs(){
     <marker id="arrowheadRed" markerWidth="10" markerHeight="10" refX="7" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#C0392B"/></marker>
     <marker id="arrowheadGray" markerWidth="10" markerHeight="10" refX="7" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#9aa4b2"/></marker>
     <marker id="dimArrow" markerWidth="9" markerHeight="9" refX="4.5" refY="2.5" orient="auto-start-reverse"><polygon points="0 0, 9 2.5, 0 5" fill="${DIMCOLOR}"/></marker>
+    <filter id="softShadow" filterUnits="userSpaceOnUse" x="-9999" y="-9999" width="19998" height="19998"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0B2545" flood-opacity="0.22"/></filter>
+    <filter id="cardShadow" filterUnits="userSpaceOnUse" x="-9999" y="-9999" width="19998" height="19998"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0B2545" flood-opacity="0.13"/></filter>
   </defs>`;
 }
 function dimH(x1,x2,y,label){
@@ -748,8 +801,6 @@ function renderPlanView(res){
 
   let svgH = svgDefs();
   svgH += `<marker id="cutArrow" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#111"/></marker>`;
-  svgH += `<filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0B2545" flood-opacity="0.22"/></filter>`;
-  svgH += `<filter id="cardShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0B2545" flood-opacity="0.13"/></filter>`;
   svgH += `<linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f3f7fc"/><stop offset="100%" stop-color="#e4ebf5"/></linearGradient>`;
 
   // ---- concrete panel (with soft shadow + gradient for depth) ----
@@ -799,16 +850,16 @@ function renderPlanView(res){
   // ---- Vua arrow + Nua indicator (symbols only) ----
   const bcx = res.geom.bolts.reduce((s,b)=>s+b.x,0)/res.geom.bolts.length;
   const bcy = res.geom.bolts.reduce((s,b)=>s+b.y,0)/res.geom.bolts.length;
-  const arrowLenCm = Math.max(panelW,panelH)*0.22;
+  const arrowLenCm = Math.max(panelW,panelH)*0.32;
   let dx=0, dy=0, dirLabel='';
   if(shearDir==='down'){ dy=-1; dirLabel='ลงล่าง'; }
   else if(shearDir==='up'){ dy=1; dirLabel='ขึ้นบน'; }
   else if(shearDir==='left'){ dx=-1; dirLabel='ไปทางซ้าย'; }
   else { dx=1; dirLabel='ไปทางขวา'; }
   const sx1=toSvgX(bcx), sy1=toSvgY(bcy), sx2=toSvgX(bcx+dx*arrowLenCm), sy2=toSvgY(bcy+dy*arrowLenCm);
-  svgH += `<line x1="${sx1}" y1="${sy1}" x2="${sx2}" y2="${sy2}" stroke="#1F6FEB" stroke-width="4" marker-end="url(#arrowhead)" filter="url(#softShadow)"/>`;
-  svgH += `<circle cx="${sx1}" cy="${sy1}" r="12" fill="none" stroke="#C0392B" stroke-width="2"/>`;
-  svgH += `<circle cx="${sx1}" cy="${sy1}" r="2.5" fill="#C0392B"/>`;
+  svgH += `<line x1="${sx1}" y1="${sy1}" x2="${sx2}" y2="${sy2}" stroke="#1F6FEB" stroke-width="3" marker-end="url(#arrowhead)" filter="url(#softShadow)"/>`;
+  svgH += `<circle cx="${sx1}" cy="${sy1}" r="9" fill="none" stroke="#C0392B" stroke-width="1.6"/>`;
+  svgH += `<circle cx="${sx1}" cy="${sy1}" r="2" fill="#C0392B"/>`;
 
   // ---- compact force legend (bottom-left of drawing — Nua/Vua values only, no verdict/DCR here) ----
   const legY = 500;
@@ -849,7 +900,7 @@ function renderSectionView(res, axis){
   const availW = 620-2*pad, availH = 400-2*pad;
   const scale = Math.min(availW/span, availH/Math.max(ha,hef*1.3));
   const cx = 310;
-  const surfY = 100; // depth=0 (installation surface) drawn near top
+  const surfY = 130; // depth=0 (installation surface) drawn near top, with clearance for Nua force arrow above
   const toSvgPos = v => cx + v*scale;
   const toSvgDepth = d => surfY + d*scale;
 
@@ -896,6 +947,28 @@ function renderSectionView(res, axis){
   svgH += `<line x1="${left}" y1="${surfY-20}" x2="${left}" y2="${botY+15}" stroke="#1a7f37" stroke-width="1" stroke-dasharray="3,3"/>`;
   svgH += `<line x1="${right}" y1="${surfY-20}" x2="${right}" y2="${botY+15}" stroke="#1a7f37" stroke-width="1" stroke-dasharray="3,3"/>`;
 
+  // ---- Visual Nua force arrow (pull-out, perpendicular to installation surface) ----
+  const groupCenterPos = bolts.reduce((s,b)=>s+b[coordKey],0)/bolts.length;
+  const nuaArrowX = toSvgPos(groupCenterPos);
+  const nuaArrowTop = surfY - 58, nuaArrowBot = surfY - 6;
+  svgH += `<line x1="${nuaArrowX}" y1="${nuaArrowBot}" x2="${nuaArrowX}" y2="${nuaArrowTop}" stroke="#C0392B" stroke-width="3" marker-end="url(#arrowheadRed)" filter="url(#softShadow)"/>`;
+  svgH += `<text x="${nuaArrowX+9}" y="${nuaArrowTop+9}" font-size="10" font-weight="800" fill="#C0392B">N_ua</text>`;
+
+  // ---- Visual Vua force arrow (shear, only drawn when it lies within this section's cutting plane) ----
+  if(vuaInThisSection){
+    const midDepth = surfY + (toSvgDepth(hef)-surfY)*0.55;
+    // determine arrow pointing direction along this section's horizontal axis
+    let pointsPositive; // true = arrow points toward +axis (right on screen)
+    if(axis==='X'){ pointsPositive = (shearDir==='right'); }
+    else { pointsPositive = (shearDir==='up'); }
+    const arrowSpan = Math.min((right-left)*0.4, 90);
+    const midX = (left+right)/2;
+    const vx1 = pointsPositive ? midX-arrowSpan/2 : midX+arrowSpan/2;
+    const vx2 = pointsPositive ? midX+arrowSpan/2 : midX-arrowSpan/2;
+    svgH += `<line x1="${vx1}" y1="${midDepth}" x2="${vx2}" y2="${midDepth}" stroke="#1F6FEB" stroke-width="3" marker-end="url(#arrowhead)" filter="url(#softShadow)"/>`;
+    svgH += `<text x="${midX}" y="${midDepth-9}" font-size="10" font-weight="800" fill="#1F6FEB" text-anchor="middle">V_ua</text>`;
+  }
+
   if(showDims){
     const anchorX = toSvgPos(bolts[0][coordKey]);
     svgH += dimV(anchorX+22, surfY, toSvgDepth(hef), `hef=${hef.toFixed(1)}`, 'right');
@@ -921,7 +994,7 @@ function renderSectionView(res, axis){
 
   svgH += `<text x="${(left+right)/2}" y="${botY+38}" font-size="12.5" font-weight="700" fill="#0B2545" text-anchor="middle">รูปตัด ${axis}-${axis} (Section ${axis}-${axis})</text>`;
 
-  svg.setAttribute('viewBox','0 0 620 545');
+  svg.setAttribute('viewBox','0 0 620 580');
   svg.innerHTML = svgH;
   document.getElementById('geomSummary').innerHTML =
     `รูปตัด ${axis}-${axis} | hef=${hef.toFixed(1)} cm | ha=${ha.toFixed(1)} cm | ระยะขอบใกล้=${caNear.toFixed(1)} cm | ระยะขอบไกล=${caFar.toFixed(1)} cm | Nua=${fmt(Nua)} kg${vuaInThisSection?` | Vua=${fmt(Vua)} kg`:''}`;
